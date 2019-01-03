@@ -1,0 +1,6 @@
+@import "inc/_vars.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Sacramento');
+
+@include fontSizes((75, 54, 42, 32, 24, 18), 7);
+@include fontWeightStock();

@@ -1,0 +1,241 @@
+[
+    {
+        "key": "group_5bf89ba976511",
+        "title": "Home page",
+        "fields": [
+            {
+                "key": "field_5bf8a06896b11",
+                "label": "Visualizar caja promo?",
+                "name": "view_free_day",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "acf-w-2",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 1,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_5bf8bcff96b12",
+                "label": "Imagen descriptiva",
+                "name": "image_free_day",
+                "type": "image",
+                "instructions": "Selecciona una imagen que vaya acorde con el asunto.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "acf-w-4",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "large",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5bfb592e62795",
+                "label": "Contenido",
+                "name": "content",
+                "type": "wysiwyg",
+                "instructions": "Introduce el contenido que tiene que ir dentro de la caja.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "acf-w-6",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "6"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5bfcf15ed37f0",
+        "title": "Parameters posts",
+        "fields": [
+            {
+                "key": "field_5bfcf2a5b4cc6",
+                "label": "Visualizar en Slide de la página inicio",
+                "name": "append_slide_home",
+                "type": "true_false",
+                "instructions": "Marca si quieres visualizar esta entrada en el slide de la página inicio.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_5bfd89383edd9",
+                "label": "Imagen de fondo para slide",
+                "name": "img_slide_bg",
+                "type": "image",
+                "instructions": "Selecciona una imagen de fondo de buena calidad para mostrar en el slide.",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5bfcf2a5b4cc6",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "full",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ".jpg, .jpeg, .png"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
+        "key": "group_5bfcd1a99adcf",
+        "title": "Contact labels",
+        "fields": [
+            {
+                "key": "field_5bfcd1e21f3b5",
+                "label": "Ver sección de contacto",
+                "name": "view_sec_contact",
+                "type": "true_false",
+                "instructions": "Activa o desactiva esta opción para mostrar u ocultar sección de contacto.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "acf-w-2",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 1,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_5bfcd2661f3b6",
+                "label": "Link iframe Google Maps",
+                "name": "iframe_link",
+                "type": "textarea",
+                "instructions": "Introduce solo el URL Embed del iframe del mapa de Google.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "acf-w-3",
+                    "id": ""
+                },
+                "default_value": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3763.612247014709!2d-99.18919758461367!3d19.38593528691085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff7fa83c9073%3A0xcb457fdf24f35ffc!2sCalle+22+39%2C+San+Pedro+de+los+Pinos%2C+03800+Ciudad+de+M%C3%A9xico%2C+CDMX!5e0!3m2!1ses!2smx!4v1542872573991",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_5bfcd3730ae7e",
+                "label": "Contenido de contacto",
+                "name": "content_contact",
+                "type": "wysiwyg",
+                "instructions": "Introduce la información básica de contacto.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "acf-w-7",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "6"
+                }
+            ]
+        ],
+        "menu_order": 1,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
+]

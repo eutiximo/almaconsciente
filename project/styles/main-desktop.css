@@ -1,0 +1,39 @@
+html, body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  background-color: white;
+  color: #2C3E50;
+}
+
+#main-nav {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #2C3E50;
+  padding: 0 0 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#main-nav .logo {
+  width: 200px;
+  height: 70px;
+  background: url("../media/assets/logo-bold.svg") center center/contain no-repeat;
+}
+
+#main-nav .box-links > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#main-nav .box-links a {
+  padding: 10px;
+  color: #2C3E50;
+  font-weight: bold;
+}
+
+#main-nav .box-links span.sep {
+  border-left: 1px solid #2C3E50;
+  width: 0px;
+  height: 40px;
+}

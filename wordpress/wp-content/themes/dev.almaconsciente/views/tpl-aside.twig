@@ -1,0 +1,176 @@
+<aside class="row" id="asidePart">
+    
+    <!-- Caja de descarga para productos de PAGA -->
+    {% set mediaAssets = post.get_field('media_assets') %}
+    {% if prms.viewDownloadBox and mediaAssets | length > 0 %}
+    <div class="col-12 downloadBox premium">
+        <p class="h4 fw-bold">{{ i18n["aside.download_title"] }}:</p>
+        
+        <div class="content scrollbar-primary">
+            {% for mAsset in mediaAssets %}
+                {% if mAsset.type_content %}
+                {% set eMedia = mAsset.media_element %}
+                <div class="item" collapse-p>
+                    <a href="#" btn-collapse-p><b>{{ eMedia.title }} <i class="fa fa-angle-down"></i></b></a>
+                    <a href="{{ eMedia.url }}" download="{{ eMedia.filename }}"><i class="fa fa-download"></i> {{ i18n["aside.btn_download_text"] }}</a>
+                    <div main-panel class="w-100">
+                        <p class="h8">{{ eMedia.description == '' ? i18n["aside.no_description"] : eMedia.description }}</p>
+                        {% if eMedia.type == 'audio' %}
+                        <audio class="w-100" src="{{ eMedia.url }}" controls></audio>
+                        {% elseif eMedia.type == 'video' %}
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <video class="embed-responsive-item" src="{{ eMedia.url }}" controls></video>
+                        </div>
+                        {% elseif eMedia.type == 'image' %}
+                        <img src="{{ eMedia.url }}" class="img-fluid">
+                        {% endif %}
+                    </div>
+                </div>
+                {% else %}
+                <div class="item" collapse-p>
+                    <a href="#" btn-collapse-p><b>{{ i18n["aside.download.title.flat_content"] }} <i class="fa fa-angle-down"></i></b></a>
+                    <div class="w-100" main-panel>
+                        {{ mAsset.flat_element }}
+                    </div>
+                </div>
+                
+                {% endif %}
+            {% endfor %}
+        </div>
+        <br>
+    </div>
+    
+    {% elseif prms.showPaymentProductBox %}
+    <div class="col-12 paymentProductBox">
+        {% if post.get_field('unlock_by_password') %}
+        <p class="h5 fw-bold text-left">{{ i18n["aside.protected_content_title"] }}</p>
+        <p class="h8 text-left">{{ i18n["aside.instructions"] }}</p>
+        <form action="{{ post.link }}" method="post" class="d-block">
+            <div class="input-group">
+                <input type="password" name="password_product" class="form-control" placeholder="{{ i18n['aside.input_placeholder'] }}">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit">{{ i18n["aside.btn_send"] }}</button>
+                </div>
+            </div>
+        </form>
+            {% if pass_fail %}
+            <p class="text-danger fw-bold text-left h7">{{ i18n["aside.protected_content.fail_password"] }}</p>
+            {% endif %}
+        
+        {% else %}
+        <p class="h5 fw-bold">{{ i18n["aside.buy_product.title"] }}</p>
+        <p class="h1 fw-bold" format-currency px-cents="-15"><span>$</span>{{ post.get_field("product_price") }}</p>
+        
+        {% if current_user.isLogged %}
+            <form action="{{ paypal.service_uri }}" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="{{ post.get_field('paypal_button_id') }}">
+                <input type="hidden" name="custom" value='{"id_user":"{{current_user.ID}}", "id_product":"{{post.ID}}", "name_product":"{{post.title}}", "go_page":"{{wp.request}}", "wp_user_email": "{{ current_user.user_email }}" }'>
+                <button type="submit" class="btn btn-exodus"><i class="fa fa-shopping-cart" style="position:relative;top:-1px;"></i> 
+                {{ i18n["aside.buy_product.text1" ]}}</button>
+            </form>
+            <p class="h8 leyendPaypal">{{ i18n["aside.buy_product.text2"] }} <i class="fa fa-paypal"></i> {{ i18n["aside.buy_product.text3"] }}</p>
+        {% else %}
+            <a href="{{ function('wp_login_url', wp.request) }}" class="btn btn-exodus">{{ i18n["aside.buy_product.access_account"] }}</a>
+            <p class="h8 leyendPaypal">{{ i18n["aside.buy_product.leyend_no_users"] }}</p>
+        {% endif %}
+        
+        {% endif %}
+        <br>
+    </div>
+    {% endif %}
+    
+    <!-- Caja de busqueda -->
+    {% if prms.viewSearchBox %}
+    <div class="col-12">
+        <p class="h4 fw-bold">{{ i18n["aside.search.title"] }}:</p>
+        {% include "tpl-search.twig" %}
+        <br>
+    </div>
+    {% endif %}
+    
+    <!-- Caja para ver los horarios de los talleres -->
+    {% if prms.viewScheduleWorkshop %}
+    <div class="col-12">
+        <p class="h4 fw-bold">{{ i18n["aside.scheduleWorkshop.title"] }}:</p>
+        
+        {% set schedules = function(['MainClass', 'processWorkshopSchedule'], post.get_field("workshop_schedule")) %}
+        <div class="d-block h5">
+            <b class="d-block text-pinker">{{ schedules.days }}</b>
+            <span class="d-block text-right">{{ schedules.start_workshop }} a {{ schedules.end_workshop }} hrs</span>
+        </div>
+        <hr>
+    </div>
+    {% endif %}
+    
+    <!-- Caja para talleres impartidos ahora -->
+    {% if prms.viewCurrentWorkshops and current_workshops | length %}
+    <div class="col-12">
+        <p class="h4 fw-bold">{{ i18n["aside.workshops.title"] }}:</p>
+        
+        <div class="owl-carousel owl-theme1 set2" owl="set2">
+            {% for post in current_workshops %}
+            <div class="card">
+                <div class="cHeader">
+                    <b>{{ post.title }}</b>
+                </div>
+                <div class="cThumbnail" style="background-image: url( {{ post.thumbnail.src }} )"></div>
+                <div class="cIntro">
+                    <p>{{ post.post_excerpt == "" ? post.post_content|excerpt(20) : post.post_excerpt }}</p>
+                </div>
+                <div class="options-box">
+                    <div class="schedule-box">
+                        {% for schedule in post.get_field("workshop_schedule") %}
+                        <b>-
+                            {% for day in schedule.days %}
+                            <span title="{{ day }}">{{ (loop.length > 2 ? day | slice(0, 2) : day)|title }}{{ loop.last ? '' : (loop.index + 1 == loop.length ? ' y ' : ', ') }}</span>
+                            {% endfor %}
+                        </b>
+                        <span>{{ schedule.start_workshop }} a {{ schedule.end_workshop }}</span>
+                        {% endfor %}
+                    </div>
+
+                    <a class="btn-card-default" href="{{ post.link }}">{{ i18n["generic.btn.readmore"] }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+    
+    <!-- Caja de subcategorias -->
+    {% if prms.viewSubcats and subcats | length %}
+    <div class="col-12 col-md-6 col-lg-12 subcatBox">
+        <p class="h4 fw-bold">{{ i18n["aside.subcats.title"] }}:</p>
+        <div class="content scrollbar-primary">
+            {% for subcat in subcats %}
+            <a href="{{ function('get_category_link', subcat.cat_ID) }}" class="d-flex justify-content-between align-items-center item">
+                <div>{{ subcat.name }}</div>
+                <div>({{ subcat.category_count }})</div>
+            </a>
+            {% endfor %}
+            <a href="{{ function('get_category_link', catParent.cat_ID) }}" class="d-block text-center item">
+                <div>{{ i18n["aside.subcats.btn_see_all"] }}</div>
+            </a>
+        </div>
+        <br>
+    </div>
+    {% endif %}
+    
+    <!-- Caja de articulos destacados -->
+    {% if prms.viewGreatPosts and great_posts | length %}
+    <div class="col-12 col-md-6 col-lg-12 greatPosts">
+        <p class="h4 fw-bold">{{ i18n["aside.great_post.title"] }}:</p>
+        {% for gpost in great_posts %}
+        <a href="{{ gpost.link }}" class="item">
+            <div><span class="img-thumb" style="background-image: url({{ gpost.thumbnail.src }})"></span></div>
+            <div class="content">
+                <b>{{ gpost.title }}</b>
+                <p class="h8">{{ gpost.post_excerpt == "" ? gpost.post_content|excerpt(10) : gpost.post_excerpt }}</p>
+            </div>
+        </a>
+        {% endfor %}
+        <br>
+    </div>
+    {% endif %}
+</aside>

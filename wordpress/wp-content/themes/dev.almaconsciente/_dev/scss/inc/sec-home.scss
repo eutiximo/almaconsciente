@@ -1,0 +1,124 @@
+@import "_vars.scss";
+
+main.home {
+    
+    @if ($vp == "desktop") {
+        
+    .registryBox {
+        display: flex;
+        
+        & > div { padding: 0 0 30% 0; }
+        
+        .bgImage {
+            background-size: cover;
+            background-position: center center;
+        }
+        
+        .info {
+            position: relative;
+            
+            .content {
+                width: 90%;
+                min-width: 480px;
+                max-width: 600px;
+                height: auto;
+                padding: 30px 50px;
+                position: absolute;
+                top: 50%;
+                left: -20%;
+                transform: translate(0%, -60%);
+                background-color: white;
+                box-shadow: rgba(black, 0.3) 2px 2px 10px;
+                
+                .special-content {
+                    div:nth-of-type(1) {
+                        font-size: toRem(36);
+                        line-height: toRem(36);
+                        font-weight: 500;
+                    }
+                    div:nth-of-type(2) {
+                        font-size: toRem(110);
+                        line-height: toRem(100);
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                    div:nth-of-type(3) {
+                        font-size: toRem(36);
+                        font-family: $ff-sacramento;
+                        text-align: center;
+                    }
+                    .btn-exodus {
+                        position: absolute;
+                        top: 100%;
+                        left: 50%;
+                        transform: translate(-50%, 50%);
+                    }
+                }
+                
+            }
+        }
+    }
+        
+    }
+    
+    @if ($vp == "mobile") {
+    .registryBox {
+        display: flex;
+        
+        .bgImage {
+            display: block;
+            background-size: cover;
+            background-position: center center;
+            padding: 0 0 35% 0;
+        }
+        
+        .info {
+            position: relative;
+            
+            .content {
+                max-width: 600px;
+                height: auto;
+                padding: 20px;
+                background-color: white;
+                
+                .special-content {
+                    div:nth-of-type(1) {
+                        font-size: toRem(36);
+                        line-height: toRem(36);
+                        font-weight: 500;
+                    }
+                    div:nth-of-type(2) {
+                        font-size: toRem(80);
+                        line-height: toRem(100);
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                    div:nth-of-type(3) {
+                        font-size: toRem(28);
+                        font-family: $ff-sacramento;
+                        text-align: center;
+                    }
+                    & > p {
+                        margin: 20px 0 0 0;
+                        text-align: center;
+                    }
+                }
+                
+            }
+        }
+        
+        //Media for Tablet
+        
+        //Media for Mobile
+        @media(min-width: 1px) and (max-width: 576px) {
+            & {
+                display: block;
+            }
+            .bgImage {
+                padding: 0 0 60% 0;
+            }
+        }
+    }
+        
+    }
+}

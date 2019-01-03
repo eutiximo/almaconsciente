@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-12 col-lg-8">
+        {% if posts | length %}
+        <div class="cardsBox">
+            {% for post in posts %}
+            <div class="card-wrap w-12 w-md-6">
+                <div class="card">
+                    <div class="cHeader">
+                        <b>{{ post.title }}</b>
+                    </div>
+                    <div class="cThumbnail" style="background-image: url( {{ post.thumbnail.src }} )"></div>
+                    <div class="cIntro">
+                        <p>{{ post.post_excerpt == "" ? post.post_content|excerpt(30) : post.post_excerpt|excerpt(30) }}</p>
+                    </div>
+                    <div class="options-box">
+                        <div class="share-box">
+                            <b>{{ i18n["generic.text.share"] }}:</b>
+                            <a href="http://www.facebook.com/share.php?u={{ post.link }}" target="_blank" class="icn-fb"></a>
+                            <a href="http://twitter.com/home?status=+{{ post.link }}" target="_blank" class="icn-tw"></a>
+                            <a href="whatsapp://send?text={{ post.link }}" data-action="share/whatsapp/share" class="icn-wa"></a>
+                        </div>
+                        
+                        <a class="btn-card-default" href="{{ post.link }}">{{ i18n["generic.btn.readmore"] }}</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="d-block text-center h5" style="margin-top:50px;"> {{ i18n["archive.blog.no_posts"] }} </p>
+        {% endif %}
+        
+        {% include 'tpl-pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+    </div>
+    
+    <div class="col-12 col-lg-4">
+        {% include 'tpl-aside.twig' %}
+    </div>
+</div>

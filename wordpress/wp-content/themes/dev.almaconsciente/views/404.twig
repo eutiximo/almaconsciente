@@ -1,0 +1,16 @@
+{% extends "_base.twig" %}
+
+{% block content %}
+
+<article class="container text-center">
+    <br>
+    <h1 class="h1 fw-bold">{{ i18n["page.404.title"] }}</h1>
+    <br>
+    <p class="h5">{{ i18n["page.404.message"] }}</p>
+    <br>
+    <a href="{{ function('home_url') }}" class="btn btn-exodus">{{ i18n["page.404.text_button"] }}</a>
+    
+    <br>
+</article>
+
+{% endblock %}

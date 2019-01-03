@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-12 col-lg-8">
+        {% if posts|length %}
+        {% for post in posts %}
+        <div class="card-lg">
+            <div class="w-12 w-sm-4 w-md-4">
+                <span class="cThumbnail" style="background-image: url({{ post.thumbnail.src }});"></span>
+            </div>
+            <div class="w-12 w-sm-8 w-md-5 cBody">
+                <b class="h5 fw-bold">{{ post.title }}</b>
+                <p>{{ post.post_excerpt == "" ? post.post_content|excerpt(20) : post.post_excerpt|excerpt(20) }}</p>
+            </div>
+            <div class="w-12 w-sm-12 w-md-3 cBody d-flex flex-wrap align-items-center justify-content-center">
+                <div class="w-7 w-md-12">
+                    {% set schedules = function(['MainClass', 'processWorkshopSchedule'], post.get_field("workshop_schedule")) %}
+                    <b class="d-block text-pinker h7">{{ schedules.days }}</b>
+                    <div class="d-block fw-bold" style="margin-bottom: 5px;">{{ schedules.start_workshop }} a {{ schedules.end_workshop }} hrs</div>
+                </div>
+                
+                <div>
+                    <a href="{{ post.link }}" class="btn-card-default">{{ i18n["generic.btn.readmore"] }}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+        {% include 'tpl-pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+        
+        {% else %}
+        <p class="d-block text-center h5" style="margin-top:50px;"> {{ i18n["archive.workshop.no_posts"] }} </p>
+        {% endif %}
+    </div>
+    
+    <div class="col-12 col-lg-4">
+        {% include 'tpl-aside.twig' %}
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<?php
+
+return array(
+    "generic.btn.readmore" => "leer más",
+    "generic.btn.viewmore" => "Ver más",
+    "generic.text.share" => "Compartir",
+    "generic.go_logged" => "Registrate o entra a tu cuenta para poder comprar este producto.",
+    
+    "base.nav.account_unlog" => "Cuenta",
+    "base.nav.go_to_profile" => "Ir a mi perfil",
+    "base.nav.logout" => "Cerrar sesión",
+    "base.nav.sign_in" => "Ingresa a tu cuenta",
+    "base.nav.registration" => "Registrate",
+    "base.nav.account_logged" => "Hola",
+    "base.body.no_find_block" => "No se encontro bloque.",
+    "base.footer.link_notice_privacity" => "Aviso de privacidad",
+    
+    "index.slide.there_are_no_slides" => "No hay publicaciones destacadas",
+    "index.resentPost.title" => "Publicaciones recientes",
+    "index.resentPost.no_have_posts" => "Por el momento no hay publicaciones recientes.",
+    "index.contact.view_map" => "Ver mapa",
+    "index.contact.view_form" => "Ver formulario",
+    "index.contact.title" => "Contacto",
+    "index.contact.placeholder_name" => "Nombre*",
+    "index.contact.placeholder_email" => "Email*",
+    "index.contact.placeholder_msg" => "Mensaje",
+    "index.contact.btn_send" => "Enviar",
+    
+    "archive.blog.no_posts" => "No hay contenido por el momento",
+    "archive.workshop.no_posts" => "No hay talleres por el momento",
+    "archive.tienda.btn_view_more_details" => "Ver más detalles",
+    "archive.tienda.paid" => "Pagado",
+    "archive.tienda.post_protected" => "Protegido",
+    "archive.tienda.post_protected_msg" => "Este prodcuto tiene material multimedia protegido.",
+    "archive.tienda.btn_buy" => "Comparar",
+    "archive.tienda.message_thanks_for_buy" => "<div class='content text-center'>Gracias por tu compra <i class=\"fa fa-smile-o\"></i><p class='d-block h8'>Si tu producto aún no se ha desbloqueado intenta refrescar la página, puede que <b>PayPal</b> aun este procesando tu compra. Si tu compra no se desbloquea en el <b>lapso de una hora</b>, ponte en contacto con el administrador de la página.</p></div>",
+    "archive.tienda.message_cancel_buy" => "<div class='content'>La compra fue cancelada</div>",
+    
+    "aside.download_title" => "Descargar",
+    "aside.btn_download_text" => "Descargar",
+    "aside.download.title.flat_content" => "Ver contenido",
+    "aside.no_description" => "Sin descripción por el momento",
+    "aside.protected_content_title" => "Material protegido",
+    "aside.instructions" => "Escribe la clave proporcionada por el administrador del sitio para ver el contenido protegido.",
+    "aside.input_placeholder" => "Escribe aquí la clave",
+    "aside.btn_send" => "Enviar",
+    "aside.protected_content.fail_password" => "Clave incorrecta, intenta de nuevo.",
+    "aside.buy_product.title" => "Adquiere este producto por",
+    "aside.buy_product.text1" => "Comprar ahora",
+    "aside.buy_product.text2" => "Tu compra es segura con",
+    "aside.buy_product.text3" => "PayPal",
+    "aside.buy_product.access_account" => "Registrate o accede a tu cuenta",
+    "aside.buy_product.leyend_no_users" => "Para poder comprar necesitas tener una cuenta con nosotros.",
+    "aside.search.title" => "Buscador interno",
+    "aside.scheduleWorkshop.title" => "Horario del taller",
+    "aside.workshops.title" => "Estamos impartiendo ahora",
+    "aside.subcats.title" => "Subcategorias",
+    "aside.subcats.btn_see_all" => "Ver todos",
+    "aside.great_post.title" => "Destacados",
+    
+    "pagination.btn.first_page" => "Primero",
+    "pagination.btn.last_page" => "Último",
+    
+    "search.placeholder_input" => "Escribe aquí",
+    "search.title" => "Busqueda",
+    "search.no_search_results" => "Tú busqueda no produjo resultados.",
+    
+    "single.btn.return_text" => "Regresar",
+    
+    "page.404.title" => "Error 404",
+    "page.404.message" => "No podemos procesar tu solicitud, es posible que se trate de un error en la URL o la página ya fue eliminada.",
+    "page.404.text_button" => "Regresar a la página de inicio"
+);

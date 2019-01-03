@@ -1,0 +1,428 @@
+Validacion exitosa
+mc_gross => 128.76
+protection_eligibility => Eligible
+item_number1 => 
+payer_id => AMEQTYWKCES8C
+tax => 17.76
+payment_date => 00:15:19 Dec 29, 2018 PST
+payment_status => Completed
+charset => windows-1252
+first_name => test
+mc_fee => 10.54
+notify_version => 3.9
+custom => {\"id_user\": \"3\", \"id_product\": \"76\", \"name_product\": \"La voz de alma\", \"go_page\": \"la-voz-de-alma-2\" }
+payer_status => verified
+business => esaud@eutiximo.com
+num_cart_items => 1
+mc_handling1 => 0.00
+verify_sign => AwD4sJJmdrzDKNGw7KMAMuZSx1AHAq8zi5DZCG3VORbACr3S9iT8epVW
+payer_email => esaud-buyer@eutiximo.com
+tax1 => 17.76
+btn_id1 => 3975765
+txn_id => 7DB81087MK2390747
+payment_type => instant
+last_name => buyer
+item_name1 => la voz de alma
+receiver_email => esaud@eutiximo.com
+payment_fee => 
+shipping_discount => 0.00
+quantity1 => 1
+insurance_amount => 0.00
+receiver_id => GGQPVXBMJ6Q2J
+txn_type => cart
+discount => 0.00
+mc_gross_1 => 111.00
+mc_currency => MXN
+residence_country => MX
+test_ipn => 1
+shipping_method => Default
+transaction_subject => 
+payment_gross => 
+ipn_track_id => c21b16a19cb16
+is_trustworthy => 1
+
+
+La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"18\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_action => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_test => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_test => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_test => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_test => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_test => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_test => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_test => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_test => 1
+
+
+
+-> La fuente no es confiable.
+action => wp_paypal_ipn
+custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
+payment_date => 00:15:19 Dec 29, 2018 PST
+quantity1 => 1
+mc_gross_1 => 111.00
+tax => 17.76
+mc_gross => 128.76
+mc_currency => MXN
+first_name => Edgar
+last_name => Uribe Saud
+payment_status => Completed
+postman_test => 1
+
+
+

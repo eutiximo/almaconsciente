@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html {{ site.language_attributes }}>
+    <head>
+        <meta charset="{{ site.charset }}" />
+        <meta name="description" content="{{ site.description }}">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="author" href="{{ site.theme.link }}/humans.txt" /> -->
+        
+        <link rel="pingback" href="{{ site.pingback_url }}" />
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+        <!-- build:styles -->
+        <link rel="stylesheet" href="{{ site.theme.link }}/_dev/libs/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="{{ site.theme.link }}/_dev/libs/owl-carousel/owl.carousel.min.css">
+        
+        <link rel="stylesheet" href="{{ site.theme.link }}/styles/styles.css">
+        <!-- endbuild -->
+        <link rel="stylesheet" href="{{ site.theme.link }}/styles/main-desktop.css" media="(min-width:1000px)">
+        <link rel="stylesheet" href="{{ site.theme.link }}/styles/main-mobile.css" media="(min-width:1px) and (max-width:999px)">
+        {{ function('wp_head') }}
+    </head>
+    
+    <body>
+        <nav id="main-nav" class="d-flex justify-content-around align-items-center">
+            <a href="site.url" class="logo"></a>
+            
+            <div class="box-links">
+                <a href="">Inicio</a>
+                <a href="">Blog</a>
+                <a href="">Talleres</a>gu
+                <a href="">Tienda</a>
+                <a href="">Acerca de</a>
+                <a href="">Contacto</a>
+                <span class="sep"></span>
+                <a href="">Cuenta</a>
+            </div>
+        </nav>
+        <main>
+            {% block content %}
+            No se encontro bloque.
+            {% endblock %}
+        </main>
+        
+        <!-- build:scripts -->
+        <script src="{{ site.theme.link }}/_dev/libs/jquery/jquery.min.js"></script>
+        <script src="{{ site.theme.link }}/_dev/libs/owl-carousel/owl.carousel.min.js"></script>
+        <script src="{{ site.theme.link }}/scripts/main.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
