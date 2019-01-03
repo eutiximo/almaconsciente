@@ -317,6 +317,29 @@ class MainClass {
     }
     
     /*
+     *  Metodo para obtener de la Tienda los productos protegidos
+        - Pasar como parametro las siguientes opciones.
+            > "$id"         |   id del post
+            > "$validate"   |   de tipo "boleano" que sirve para saver si paso la verificacion y obtener data
+            > "$addParams"  |   un simple arreglo que sirve para añadir opciones al mismo arreglo que se va a retornar.
+     */
+    public function get_protected_products($id = null, $validate = false, $addParams = array()) {
+        $arrData = array("aside" => array(), "top" => array(), "bottom" => array());
+        if ($id !== null and $validate) {
+            $getMediaAssets = get_field("media_assets", $id);
+            
+            foreach ($getMediaAssets as $value) {
+                $pos = $value["position_content"];
+                array_push($arrData[$pos], $value);
+            }
+            
+            if (!empty($addParams))
+                foreach ($addParams as $key => $value) { $arrData[$key] = $value; }
+        }
+        return $arrData;
+    }
+    
+    /*
      *  Metodo para obtener las subcategorías apartir de la categoría padre.
         - Pasar como parametro un arreglo con lo siguientes indicies:
             > "parent" => integer   |   id de la categoría padre.

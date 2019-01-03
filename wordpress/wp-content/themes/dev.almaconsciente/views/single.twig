@@ -11,6 +11,8 @@
         <div class="col-12 col-lg-8 contentPost">
             <h1 class="fw-bold"> {{ post.title }} </h1>
             
+            {% include inc_content.tpl_top ignore missing with {data: inc_content.data_top} %}
+            
             {{ post.post_content|wpautop }}
             
             <div class="d-flex justify-content-end align-items-center shareBox">
@@ -20,6 +22,7 @@
                 <div><a href="whatsapp://send?text={{ post.link }}" data-action="share/whatsapp/share" class="icn-wa"></a></div>
             </div>
             
+            {% include inc_content.tpl_bottom ignore missing with {data: inc_content.data_bottom} %}
         </div>
 
         <div class="col-12 col-lg-4">

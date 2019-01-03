@@ -14,15 +14,7 @@ elseif ($context["current_user"]->isLogged) {
 }
 
 //Obtener los productos protegidos si pasan las validaciones
-if ($logProduct) {
-    $getMediaAssets = get_field("media_assets", get_the_ID());
-    $arrData = array("aside" => array(), "top" => array(), "bottom" => array());
-    
-    foreach ($getMediaAssets as $value) {
-        $pos = $value["position_content"];
-        array_push($arrData[$pos], $value);
-    }
-}
+$getProductsProtected = $MC->get_protected_products(get_the_ID(), $logProduct);
 
 //Visualizar caja de descargas
 $context["prms"]["viewDownloadBox"] = $logProduct;
@@ -37,6 +29,11 @@ $context["metajsrun"] .= "formatCurrency,";
 //Obtener las subcategorias.
 $context["subcats"] = $subcats = $MC->get_subcategories($catprms);
 //Arreglo con los productos protegidos.
-$context["protected_content"] = $arrData;
-//Definir template
-$tpl = "single.tienda.twig";
+$context["inc_content"] = $inc_content = array(
+    "tpl_top" => "tpl-tiendaProtectedContent.twig",
+    "tpl_bottom" => "tpl-tiendaProtectedContent.twig",
+    "data_top" => $getProductsProtected["top"],
+    "data_bottom" => $getProductsProtected["bottom"]
+);
+//Añadir productos protegidos al aside
+$context["aside_products"] = $getProductsProtected["aside"];

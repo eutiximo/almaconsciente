@@ -1,17 +1,16 @@
 <aside class="row" id="asidePart">
     
     <!-- Caja de descarga para productos de PAGA -->
-    {% set mediaAssets = post.get_field('media_assets') %}
-    {% if prms.viewDownloadBox and mediaAssets | length > 0 %}
+    {% if prms.viewDownloadBox and aside_products | length > 0 %}
     <div class="col-12 downloadBox premium">
         <p class="h4 fw-bold">{{ i18n["aside.download_title"] }}:</p>
         
         <div class="content scrollbar-primary">
-            {% for mAsset in mediaAssets %}
+            {% for mAsset in aside_products %}
                 {% if mAsset.type_content %}
                 {% set eMedia = mAsset.media_element %}
                 <div class="item" collapse-p>
-                    <a href="#" btn-collapse-p><b>{{ eMedia.title }} <i class="fa fa-angle-down"></i></b></a>
+                    <a href="#" class="w-7" btn-collapse-p><b>{{ mAsset.title == '' ? eMedia.title : mAsset.title }} <i class="fa fa-angle-down"></i></b></a>
                     <a href="{{ eMedia.url }}" download="{{ eMedia.filename }}"><i class="fa fa-download"></i> {{ i18n["aside.btn_download_text"] }}</a>
                     <div main-panel class="w-100">
                         <p class="h8">{{ eMedia.description == '' ? i18n["aside.no_description"] : eMedia.description }}</p>
@@ -28,7 +27,7 @@
                 </div>
                 {% else %}
                 <div class="item" collapse-p>
-                    <a href="#" btn-collapse-p><b>{{ i18n["aside.download.title.flat_content"] }} <i class="fa fa-angle-down"></i></b></a>
+                    <a href="#" btn-collapse-p><b>{{ mAsset.title == '' ? i18n["aside.download.title.flat_content"] : mAsset.title }} <i class="fa fa-angle-down"></i></b></a>
                     <div class="w-100" main-panel>
                         {{ mAsset.flat_element }}
                     </div>
