@@ -10,10 +10,10 @@
                 {% if mAsset.type_content %}
                 {% set eMedia = mAsset.media_element %}
                 <div class="item" collapse-p>
-                    <a href="#" class="w-7" btn-collapse-p><b>{{ mAsset.title == '' ? eMedia.title : mAsset.title }} <i class="fa fa-angle-down"></i></b></a>
+                    <a href="#" class="w-7" btn-collapse-p><b>{{ mAsset.title is empty ? eMedia.title : mAsset.title }} <i class="fa fa-angle-down"></i></b></a>
                     <a href="{{ eMedia.url }}" download="{{ eMedia.filename }}"><i class="fa fa-download"></i> {{ i18n["aside.btn_download_text"] }}</a>
                     <div main-panel class="w-100">
-                        <p class="h8">{{ eMedia.description == '' ? i18n["aside.no_description"] : eMedia.description }}</p>
+                        <p class="h8">{{ eMedia.description is empty ? i18n["aside.no_description"] : eMedia.description }}</p>
                         {% if eMedia.type == 'audio' %}
                         <audio class="w-100" src="{{ eMedia.url }}" controls></audio>
                         {% elseif eMedia.type == 'video' %}
@@ -27,7 +27,7 @@
                 </div>
                 {% else %}
                 <div class="item" collapse-p>
-                    <a href="#" btn-collapse-p><b>{{ mAsset.title == '' ? i18n["aside.download.title.flat_content"] : mAsset.title }} <i class="fa fa-angle-down"></i></b></a>
+                    <a href="#" btn-collapse-p><b>{{ mAsset.title is empty ? i18n["aside.download.title.flat_content"] : mAsset.title }} <i class="fa fa-angle-down"></i></b></a>
                     <div class="w-100" main-panel>
                         {{ mAsset.flat_element }}
                     </div>
@@ -39,7 +39,7 @@
         <br>
     </div>
     
-    {% elseif prms.showPaymentProductBox %}
+    {% elseif prms.showPaymentProductBox and not prms.viewDownloadBox %}
     <div class="col-12 paymentProductBox">
         {% if post.get_field('unlock_by_password') %}
         <p class="h5 fw-bold text-left">{{ i18n["aside.protected_content_title"] }}</p>

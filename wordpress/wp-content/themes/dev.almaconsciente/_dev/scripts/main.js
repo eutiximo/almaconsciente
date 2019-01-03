@@ -18,6 +18,24 @@ var console, document, window, $g;
     //=include inc/method.ipopover.js
     //=include inc/method.footerAlwaysBottom.js
     
+    $g.responsiveEmbed = function () {
+        var Elems = $("video, iframe");
+        
+        Elems.each(function () {
+            var getParent = $(this).parent(),
+                parentWidth = getParent.width(),
+                Elem = $(this),
+                ElemWidth = Elem.width();
+            
+            if ((!parentWidth || ElemWidth > parentWidth) && !getParent.hasClass("embed-responsive")) {
+                Elem.removeAttr("height width style");
+                Elem.addClass("embed-responsive embed-responsive-16by9");
+                Elem.wrap(`<div class="embed-responsive embed-responsive-16by9"></div>`);
+                $(this).replaceWith(Elem);
+            }
+        });
+    };
+    
     /* Document Ready */
     $(function () {
         $g.owl.init();
@@ -28,5 +46,6 @@ var console, document, window, $g;
         $g.notify.Init();
         $g.ipopover();
         $g.footer_always_bottom();
+        $g.responsiveEmbed();
     });
 })();
