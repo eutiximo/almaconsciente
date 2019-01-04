@@ -8,7 +8,7 @@
             </div>
             <div class="w-12 w-sm-8 w-md-5 cBody">
                 <b class="h5 fw-bold">{{ post.title }}</b>
-                <p>{{ post.post_excerpt == "" ? post.post_content|excerpt(20) : post.post_excerpt|excerpt(20) }}</p>
+                <p>{{ post.post_excerpt is empty ? post.post_content|excerpt(20) : post.post_excerpt|excerpt(20) }}</p>
             </div>
             <div class="w-12 w-sm-12 w-md-3 cBody d-flex flex-wrap align-items-center justify-content-center">
                 <div class="w-7 w-md-12">

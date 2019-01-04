@@ -34,6 +34,7 @@ class StarterSite extends Timber\Site {
         add_action("after_setup_theme", array($this, 'hide_adminbar'));
         add_action("user_register", array($this, "set_params_new_subscriber"));
         add_action("admin_enqueue_scripts", array($this, "custom_script_admin"));
+        add_action("admin_menu", array($this, "remove_options_admin_menu"));
 		//add_action( 'init', array( $this, 'register_post_types' ) );
 		//add_action( 'init', array( $this, 'register_taxonomies' ) );
         
@@ -46,6 +47,15 @@ class StarterSite extends Timber\Site {
         
 		parent::__construct();
 	}
+    
+    /*  Esta function es temporal hasta que se paguen los derechos totales del sitio
+        Documentation: https://codex.wordpress.org/Function_Reference/remove_menu_page
+    */
+    public function remove_options_admin_menu() {
+        remove_menu_page( 'themes.php' );
+        remove_menu_page( 'edit.php?post_type=acf-field-group' );
+        remove_menu_page( 'options-general.php' );
+    }
     
     /* Metodo para añadir caracteristicas de soporte al tema */
     public function theme_supports() {

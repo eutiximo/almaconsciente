@@ -36,3 +36,7 @@ $widthSizes: (
     }
     .acf-checkbox-list {}
 }
+
+.acf-postbox, .acf-postbox:hover {
+    & > .hndle .acf-hndle-cog { display: none !important; }
+}

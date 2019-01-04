@@ -10,7 +10,7 @@
                     </div>
                     <div class="cThumbnail" style="background-image: url( {{ post.thumbnail.src }} )"></div>
                     <div class="cIntro">
-                        <p>{{ post.post_excerpt == "" ? post.post_content|excerpt(30) : post.post_excerpt|excerpt(30) }}</p>
+                        <p>{{ post.post_excerpt is empty ? post.post_content|excerpt(30) : post.post_excerpt|excerpt(30) }}</p>
                     </div>
                     <div class="options-box">
                         <div class="share-box">

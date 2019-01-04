@@ -10,7 +10,9 @@
             <div class="container">
                 <div class="d-block w-10 w-sm-8 w-md-9 w-lg-5">
                     <h2 class="h2 fw-bold">{{ slide.post_title }}</h2>
-                    <p class="text-justify fw-500">{{ slide.post_content|excerpt(30) }}</p>
+                    <p class="text-justify fw-500">
+                        {{ slide.post_excerpt is empty ? slide.post_content|excerpt(30) : slide.post_excerpt|excerpt(30) }}
+                    </p>
                     
                     <a href="{{ slide.link }}" class="btn btn-exodus">{{ i18n["generic.btn.readmore"] }}</a>
                 </div>
@@ -74,7 +76,7 @@
                     </div>
                     <div class="cThumbnail" style="background-image: url( {{ thepost.thumbnail.src }} )"></div>
                     <div class="cIntro">
-                        <p>{{ thepost.post_content|excerpt(30) }}</p>
+                        <p>{{ thepost.post_excerpt is empty ? thepost.post_content|excerpt(30) : thepost.post_excerpt|excerpt(30) }}</p>
                     </div>
                     <div class="btn-content">
                         <a href="{{ thepost.link }}">{{ i18n["generic.btn.readmore"] }}</a>

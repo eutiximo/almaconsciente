@@ -62,3 +62,10 @@
   border-right: 1px solid rgba(0, 0, 0, 0.3);
   display: inline-block;
 }
+
+/*.acf-postbox {
+    h2.hndle.ui-sortable-handle a.acf-hndle-cog { display: none !important; }
+}*/
+.acf-postbox:hover > .hndle .acf-hndle-cog {
+  display: none !important;
+}

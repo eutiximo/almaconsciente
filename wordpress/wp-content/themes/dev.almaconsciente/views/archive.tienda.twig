@@ -9,7 +9,7 @@
                     </div>
                     <div class="cThumbnail" style="background-image: url( {{ post.thumbnail.src }} )"></div>
                     <div class="cIntro">
-                        <p>{{ post.post_excerpt == "" ? post.post_content|excerpt(30) : post.post_excerpt }}</p>
+                        <p>{{ post.post_excerpt is empty ? post.post_content|excerpt(30) : post.post_excerpt }}</p>
                     </div>
                     <div class="options-box">
                     {% if post.get_field('unlock_by_password') %}
