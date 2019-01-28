@@ -1,3 +1,4 @@
+$vp: "desktop";
 @import "inc/_vars.scss";
 
 html, body {
@@ -5,20 +6,31 @@ html, body {
     font-size: $fz-default;
     background-color: white;
     color: $clr-asabache;
+    font-weight: 500;
 }
 
 #main-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
-    background-color: rgba(white, 0.2);
-    border-bottom: 1px solid $clr-asabache;
-    padding: 0 0 20px 0;
+    padding: 10px 0;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 9999;
+    border-bottom: 1px solid $clr-asabache;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.9) 70%,rgba(255,255,255,0.5) 100%);
+    
+    &.sticky-mode {
+        position: sticky;
+        top: 0px;
+        left: 0;
+    }
     
     .logo {
         width: 200px;
-        height: 70px;
+        height: 50px;
         background: url("../media/assets/logo-bold.svg") center center / contain no-repeat;
     }
     
@@ -27,7 +39,7 @@ html, body {
             display: inline-block;
             vertical-align: middle;
         }
-        a {
+        a, .alink {
             padding: 10px;
             color: $clr-asabache;
             font-weight: bold;
@@ -39,3 +51,47 @@ html, body {
         }
     }
 }
+
+.sec {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    
+    &.bg-gray { background-color: $clr-cloud; }
+    
+    &.pd-x2 { padding: 20px 0; }
+    &.pd-x4 { padding: 40px 0; }
+    &.pd-x6 { padding: 60px 0; }
+    &.pd-x8 { padding: 80px 0; }
+    &.pd-x10 { padding: 100px 0; }
+}
+
+#main-footer{
+    display: block;
+    width: 100%;
+    padding: 50px 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: rgba(black, 0.3) -1px 0 5px;
+    
+    .logo {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto 10px auto;
+    }
+    
+    .row > div:nth-of-type(1) {
+        border-right: 1px solid $clr-asabache;
+    }
+    a { color: $clr-asabache; }
+}
+
+@import "inc/comp.aside.scss";
+
+@import "inc/sec-home.scss";
+
+@import "inc/sec-archive.scss";
+
+@import "inc/sec-single.scss";

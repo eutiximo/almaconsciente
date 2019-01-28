@@ -7,12 +7,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <link rel="author" href="{{ site.theme.link }}/humans.txt" /> -->
+        <meta name="jsrun" content="{{ metajsrun }}">
         
         <link rel="pingback" href="{{ site.pingback_url }}" />
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <!-- build:styles -->
         <link rel="stylesheet" href="{{ site.theme.link }}/_dev/libs/bootstrap/css/bootstrap.css">
-        <link rel="stylesheet" href="{{ site.theme.link }}/_dev/libs/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="{{ site.theme.link }}/_dev/libs/fontawesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ site.theme.link }}/_dev/libs/owl-carousel/assets/owl.carousel.min.css">
         
         <link rel="stylesheet" href="{{ site.theme.link }}/styles/styles.css">
         <!-- endbuild -->
@@ -22,30 +24,75 @@
     </head>
     
     <body>
-        <nav id="main-nav" class="d-flex justify-content-around align-items-center">
-            <a href="site.url" class="logo"></a>
+        <nav id="main-nav" class="{{ navSticky ? 'sticky-mode' : null }}">
+            <a href="{{site.url}}" class="logo"></a>
             
             <div class="box-links">
-                <a href="">Inicio</a>
-                <a href="">Blog</a>
-                <a href="">Talleres</a>gu
-                <a href="">Tienda</a>
-                <a href="">Acerca de</a>
-                <a href="">Contacto</a>
+                {% for menu in mainMenu %}
+                <a href="{{ menu.url }}">{{ __(menu.title) }}</a>
+                {% endfor %}
+                
+                {% set social = post.get_field('social_networks') %}
+                {% if social|length %}
+                <div>
+                    {% for snet in social %}
+                    <a href="{{ snet.url }}" target="_blank"><span class="fa fa-{{ snet.platform }}"></span></a>
+                    {% endfor %}
+                </div>
+                {% endif%}
+                
                 <span class="sep"></span>
-                <a href="">Cuenta</a>
+                {% if current_user.isLogged %}
+                    <div class="alink ipopover" off-action>
+                        {{ i18n["base.nav.account_logged"] }} {{ current_user.first_name == '' ? current_user.user_nicename : current_user.first_name }} <i class="fa fa-angle-down"></i>
+                        <div class="popover-box">
+                            <a href="{{ function('get_edit_profile_url') }}" class="item">
+                                <i class="fa fa-user"></i>&nbsp;{{ i18n["base.nav.go_to_profile"]|replace({" ": "&nbsp;"}) }}</a>
+                            <a href="{{ function('wp_logout_url') }}" class="item">
+                                <i class="fa fa-sign-out"></i>&nbsp;{{ i18n["base.nav.logout"]|replace({" ": "&nbsp;"}) }}</a>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="alink ipopover" off-action>
+                        {{ i18n["base.nav.account_unlog"] }} <i class="fa fa-angle-down"></i>
+                        <div class="popover-box">
+                            <a href="{{ function('wp_login_url', (wp.request == false ? '/' : wp.request) ) }}" class="item">
+                                <i class="fa fa-sign-in"></i>&nbsp;{{ i18n["base.nav.sign_in"]|replace({" ": "&nbsp;"}) }}</a>
+                            <a href="{{ function('wp_registration_url') }}" class="item">
+                                <i class="fa fa-user-plus"></i>&nbsp;{{ i18n["base.nav.registration"]|replace({" ": "&nbsp;"}) }}</a>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
         </nav>
-        <main>
+        <main class="{{ nameClass }}">
             {% block content %}
-            No se encontro bloque.
+            {{ i18n["base.body.no_find_block"] }}
             {% endblock %}
         </main>
         
+        <footer id="main-footer">
+            <div class="container">
+                <div class="logo">
+                    <img src="{{ site.theme.link }}/media/assets/logo-bold.svg">
+                </div>
+                <br>
+                <div class="row mx-auto w-12 w-md-8 w-lg-5 text-center">
+                    <div class="col-6"> &copy; {{"now"|date('Y')}} Almaconsciente</div>
+                    <div class="col-6">
+                        <a href=" {{ linkNoticePrivacity }} ">{{ i18n["base.footer.link_notice_privacity"] }}</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
         <!-- build:scripts -->
+        <script src='https://www.google.com/recaptcha/api.js'></script>
         <script src="{{ site.theme.link }}/_dev/libs/jquery/jquery.min.js"></script>
         <script src="{{ site.theme.link }}/_dev/libs/owl-carousel/owl.carousel.min.js"></script>
         <script src="{{ site.theme.link }}/scripts/main.js"></script>
         <!-- endbuild -->
+        
+        {{ function('wp_footer') }}
     </body>
 </html>

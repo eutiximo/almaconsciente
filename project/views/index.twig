@@ -1,7 +1,118 @@
 {% extends "_base.twig" %}
 
 {% block content %}
+<!-- Caja de "Diapositivas y principales" -->
 <header>
-    
+    <div class="owl-carousel owl-theme1" owl fit-content>
+        {% if slidePosts | length %}
+        {% for slide in slidePosts %}
+        <div class="item" style="background-image: url( {{ slide.bg_image }} )">
+            <div class="container">
+                <div class="d-block w-10 w-sm-8 w-md-9 w-lg-5" style="{{ slide.text_style }}">
+                    <h2 class="h2 fw-bold">{{ slide.title }}</h2>
+                    <p class="text-justify fw-500">
+                        {{ slide.excerpt is empty ? slide.content|excerpt(30) : slide.excerpt|excerpt(30) }}
+                    </p>
+                    {% if slide.link %}
+                    <a href="{{ slide.link }}" class="btn btn-exodus">{{ i18n["generic.btn.readmore"] }}</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="item" style="background-image: url({{ site.theme.link }}/media/images/minimal-plant.jpg)">
+            <div class="container">
+                <h1 class="text-center">{{ i18n["index.slide.there_are_no_slides"] }}</h1>
+            </div>
+        </div>
+        {% endif %}
+    </div>
 </header>
+
+<!-- Caja de "Nosotros" -->
+<section class="sec pd-x6">
+    <div class="container text-center"> {{ post.post_content }} </div>
+</section>
+
+<!-- Caja de promos -->
+{% if post.get_field("view_free_day") %}
+<section class="sec">
+    <div class="registryBox">
+        <div class="w-12 w-md-6 w-lg-7 bgImage" style="background-image: url( {{ Image(post.image_free_day).src }} )"></div>
+        <div class="w-12 w-md-6 w-lg-5 info">
+            <div class="content">
+                {{ post.get_field("content") }}
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Seccion de post recientes -->
+<section class="sec bg-gray pd-x6">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center flex-wrap">
+            <div class="col-12 col-sm-10">
+                <div class="h4 fw-600">{{ i18n["index.resentPost.title"] }}</div>
+            </div>
+            <div class="col-12 col-sm-2 text-right">
+                <a href="{{ site.url }}?s=" class="btn btn-exodus">{{ i18n["generic.btn.viewmore"] }}</a>
+            </div>
+        </div>
+        
+        <br>
+        <br>
+        
+        {% if lastPosts|length %}
+        <div class="cardsBox">
+            {% for thepost in lastPosts %}
+            <div class="card-wrap w-12 w-md-6 w-lg-4">
+                <div class="card">
+                    <div class="cHeader">
+                        <b>{{ thepost.post_title }}</b>
+                        <span>{{ thepost.terms("category") | join(" ") | replace({" ": "&nbsp;"}) }}</span>
+                    </div>
+                    <div class="cThumbnail" style="background-image: url( {{ thepost.thumbnail.src }} )"></div>
+                    <div class="cIntro">
+                        <p>{{ thepost.post_excerpt is empty ? thepost.post_content|excerpt(30) : thepost.post_excerpt|excerpt(30) }}</p>
+                    </div>
+                    <div class="btn-content">
+                        <a href="{{ thepost.link }}">{{ i18n["generic.btn.readmore"] }}</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="h5 text-center">{{ i18n["index.resentPost.no_have_posts"] }}</p>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Seccion de contacto -->
+{% if argsContact.enabled %}
+<section class="sec pd-x8 contactSec" id="contacto">
+    <div class="overlay"></div>
+    <iframe src="{{ argsContact.iframe_link }}" class="map" allowfullscreen></iframe>
+    <button class="toggleViewMap btn btn-xs btn-exodus" data-text-toggle="{{ i18n['contactform.view_map'] }}, {{ i18n['contactform.view_form'] }}"><i class="fa fa-map-marker"></i> <span>{{ i18n["contactform.view_map"] }}</span></button>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-7">
+                <p class="h2 fw-bold">{{ i18n["contactform.title"] }}</p>
+                <br>
+                {{ argsContact.content_contact }}
+                <br>
+            </div>
+            
+            <div class="col-12 col-sm-5">
+                {% include "tpl-contactForm.twig" %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endif %}
+
 {% endblock %}
