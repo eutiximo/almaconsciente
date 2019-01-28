@@ -322,6 +322,10 @@
   position: relative;
 }
 
+.owl-carousel.owl-theme1 .owl-item {
+  overflow: hidden;
+}
+
 .owl-carousel.owl-theme1 .item {
   display: block;
   width: 100%;
@@ -1059,4 +1063,56 @@ textarea.form-control {
 
 .ipopover .popover-box .item:last-of-type {
   border: 0;
+}
+
+*[tabs] > nav:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border-bottom: 1px solid #2C3E50;
+}
+
+*[tabs] > nav:first-child > * {
+  padding: 5px 5px;
+  color: #2C3E50;
+  font-weight: 500;
+}
+
+*[tabs] > nav:first-child button {
+  font-weight: 900;
+  cursor: pointer;
+  border: none;
+  color: #2C3E50;
+  background: white;
+  outline: none;
+}
+
+*[tabs] > nav:first-child button:hover:not(.act) {
+  background-color: #77729B;
+  color: white;
+}
+
+*[tabs] > nav:first-child button.act {
+  position: relative;
+  top: 1px;
+  border: 1px solid #2C3E50;
+  border-bottom: none;
+  -webkit-box-shadow: white 0 1px 0;
+          box-shadow: white 0 1px 0;
+}
+
+*[tabs] [tab-display] {
+  display: none;
+}
+
+*[tabs] [tab-display].act {
+  display: block;
 }

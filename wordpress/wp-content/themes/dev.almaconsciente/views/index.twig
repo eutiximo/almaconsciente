@@ -6,15 +6,16 @@
     <div class="owl-carousel owl-theme1" owl fit-content>
         {% if slidePosts | length %}
         {% for slide in slidePosts %}
-        <div class="item" style="background-image: url( {{ slide.get_field('img_slide_bg') }} )">
+        <div class="item" style="background-image: url( {{ slide.bg_image }} )">
             <div class="container">
-                <div class="d-block w-10 w-sm-8 w-md-9 w-lg-5">
-                    <h2 class="h2 fw-bold">{{ slide.post_title }}</h2>
+                <div class="d-block w-10 w-sm-8 w-md-9 w-lg-5" style="{{ slide.text_style }}">
+                    <h2 class="h2 fw-bold">{{ slide.title }}</h2>
                     <p class="text-justify fw-500">
-                        {{ slide.post_excerpt is empty ? slide.post_content|excerpt(30) : slide.post_excerpt|excerpt(30) }}
+                        {{ slide.excerpt is empty ? slide.content|excerpt(30) : slide.excerpt|excerpt(30) }}
                     </p>
-                    
+                    {% if slide.link %}
                     <a href="{{ slide.link }}" class="btn btn-exodus">{{ i18n["generic.btn.readmore"] }}</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -56,9 +57,7 @@
                 <div class="h4 fw-600">{{ i18n["index.resentPost.title"] }}</div>
             </div>
             <div class="col-12 col-sm-2 text-right">
-                {% for menu in mainMenu if menu.title == 'Blog' %}
-                <a href="{{ menu.url }}" class="btn btn-exodus">{{ i18n["generic.btn.viewmore"] }}</a>
-                {% endfor %}
+                <a href="{{ site.url }}?s=" class="btn btn-exodus">{{ i18n["generic.btn.viewmore"] }}</a>
             </div>
         </div>
         
@@ -96,12 +95,12 @@
 <section class="sec pd-x8 contactSec" id="contacto">
     <div class="overlay"></div>
     <iframe src="{{ argsContact.iframe_link }}" class="map" allowfullscreen></iframe>
-    <button class="toggleViewMap btn btn-xs btn-exodus" data-text-toggle="{{ i18n['index.contact.view_map'] }}, {{ i18n['index.contact.view_form'] }}"><i class="fa fa-map-marker"></i> <span>{{ i18n["index.contact.view_map"] }}</span></button>
+    <button class="toggleViewMap btn btn-xs btn-exodus" data-text-toggle="{{ i18n['contactform.view_map'] }}, {{ i18n['contactform.view_form'] }}"><i class="fa fa-map-marker"></i> <span>{{ i18n["contactform.view_map"] }}</span></button>
     
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-7">
-                <p class="h2 fw-bold">{{ i18n["index.contact.title"] }}</p>
+                <p class="h2 fw-bold">{{ i18n["contactform.title"] }}</p>
                 <br>
                 {{ argsContact.content_contact }}
                 <br>

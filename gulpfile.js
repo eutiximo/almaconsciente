@@ -69,7 +69,14 @@ function fnBrowserSync() {
 }
 
 /* Compilar todo el sitio y optimizar y sofuscar sus elementos */
-function buildDist() {}
+function buildDist() {
+    var destProject = `./project/`;
+    gulp.src(destProject).pipe(clean({forse: true}))
+    
+    setTimeout(function () {
+        gulp.src(`${devPath}/*`).pipe(gulp.dest(destProject));
+    }, 3000);
+}
 
 /*
  * Lista de tareas Gulp

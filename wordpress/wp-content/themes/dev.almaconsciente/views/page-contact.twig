@@ -5,12 +5,12 @@
 <section class="sec pd-x8" id="contacto">
     <div class="overlay"></div>
     <iframe src="{{ post.get_field('iframe_link') }}" class="map" allowfullscreen></iframe>
-    <button class="toggleViewMap btn btn-xs btn-exodus" data-text-toggle="{{ i18n['index.contact.view_map'] }}, {{ i18n['index.contact.view_form'] }}"><i class="fa fa-map-marker"></i> <span>{{ i18n["index.contact.view_map"] }}</span></button>
+    <button class="toggleViewMap btn btn-xs btn-exodus" data-text-toggle="{{ i18n['contactform.view_map'] }}, {{ i18n['contactform.view_form'] }}"><i class="fa fa-map-marker"></i> <span>{{ i18n["contactform.view_map"] }}</span></button>
     
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-7">
-                <p class="h2 fw-bold">{{ i18n["index.contact.title"] }}</p>
+                <p class="h2 fw-bold">{{ i18n["contactform.title"] }}</p>
                 <br>
                 {{ post.get_field('content_contact')}}
                 <br>

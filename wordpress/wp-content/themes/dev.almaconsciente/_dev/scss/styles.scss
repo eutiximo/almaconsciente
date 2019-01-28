@@ -207,3 +207,46 @@ textarea.form-control {
         }
     }
 }
+
+*[tabs] {
+    & > nav:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        margin-bottom: 10px;
+        font-size: toRem(18);
+        border-bottom: 1px solid $clr-asabache;
+        
+        & > * {
+            padding: 5px 5px;
+            color: $clr-asabache;
+            font-weight: 500;
+        }
+        button {
+            font-weight: 900;
+            cursor: pointer;
+            border: none;
+            color: $clr-asabache;
+            background: white;
+            outline: none;
+            
+            &:hover:not(.act) {
+                background-color: $clr-exodus;
+                color: white;
+            }
+            &.act {
+                position: relative;
+                top: 1px;
+                border: 1px solid $clr-asabache;
+                border-bottom: none;
+                box-shadow: white 0 1px 0;
+            }
+        }
+    }
+    
+    [tab-display] {
+        display: none;
+        
+        &.act { display: block; }
+    }
+}

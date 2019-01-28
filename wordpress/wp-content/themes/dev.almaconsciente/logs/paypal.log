@@ -1,25 +1,25 @@
-Validacion exitosa
+-> Validacion exitosa
 mc_gross => 128.76
 protection_eligibility => Eligible
 item_number1 => 
 payer_id => AMEQTYWKCES8C
 tax => 17.76
-payment_date => 00:15:19 Dec 29, 2018 PST
+payment_date => 02:06:08 Dec 29, 2018 PST
 payment_status => Completed
 charset => windows-1252
 first_name => test
 mc_fee => 10.54
 notify_version => 3.9
-custom => {\"id_user\": \"3\", \"id_product\": \"76\", \"name_product\": \"La voz de alma\", \"go_page\": \"la-voz-de-alma-2\" }
+custom => {\"id_user\": \"\", \"id_product\": \"76\", \"name_product\": \"La voz de alma\", \"go_page\": \"la-voz-de-alma-2\" }
 payer_status => verified
 business => esaud@eutiximo.com
 num_cart_items => 1
 mc_handling1 => 0.00
-verify_sign => AwD4sJJmdrzDKNGw7KMAMuZSx1AHAq8zi5DZCG3VORbACr3S9iT8epVW
+verify_sign => A2DHUUJFfLoDqJhvAeCSzJ84PombAW6LU4GjoFE4AUpFbne35fnJYBXY
 payer_email => esaud-buyer@eutiximo.com
 tax1 => 17.76
 btn_id1 => 3975765
-txn_id => 7DB81087MK2390747
+txn_id => 96J252213B205874T
 payment_type => instant
 last_name => buyer
 item_name1 => la voz de alma
@@ -38,391 +38,575 @@ test_ipn => 1
 shipping_method => Default
 transaction_subject => 
 payment_gross => 
-ipn_track_id => c21b16a19cb16
+ipn_track_id => 586d8fed74eaf
 is_trustworthy => 1
 
 
-La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
+
+-> Validacion exitosa
 mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
+protection_eligibility => Eligible
+item_number1 => 
+payer_id => AMEQTYWKCES8C
+tax => 17.76
+payment_date => 02:08:41 Dec 29, 2018 PST
 payment_status => Completed
-postman_action => 1
+charset => windows-1252
+first_name => test
+mc_fee => 10.54
+notify_version => 3.9
+custom => {\"id_user\": \"3\", \"id_product\": \"76\", \"name_product\": \"La voz de alma\", \"go_page\": \"la-voz-de-alma-2\" }
+payer_status => verified
+business => esaud@eutiximo.com
+num_cart_items => 1
+mc_handling1 => 0.00
+verify_sign => AN5dvMzgbTsBV6grkY.xVn8oo9MNAiWe2Q0vJm25vGuvABspOHgYNcQp
+payer_email => esaud-buyer@eutiximo.com
+tax1 => 17.76
+btn_id1 => 3975765
+txn_id => 9K458921TE362562M
+payment_type => instant
+last_name => buyer
+item_name1 => la voz de alma
+receiver_email => esaud@eutiximo.com
+payment_fee => 
+shipping_discount => 0.00
+quantity1 => 1
+insurance_amount => 0.00
+receiver_id => GGQPVXBMJ6Q2J
+txn_type => cart
+discount => 0.00
+mc_gross_1 => 111.00
+mc_currency => MXN
+residence_country => MX
+test_ipn => 1
+shipping_method => Default
+transaction_subject => 
+payment_gross => 
+ipn_track_id => cd2e9743875f0
+is_trustworthy => 1
 
 
 
+-> Fuente confiable (Paypal.com)
+mc_gross => 128.76
+protection_eligibility => Eligible
+item_number1 => 
+payer_id => AMEQTYWKCES8C
+tax => 17.76
+payment_date => 02:15:36 Dec 29, 2018 PST
+payment_status => Completed
+charset => windows-1252
+first_name => test
+mc_fee => 10.54
+notify_version => 3.9
+custom => {\"id_user\": \"3\", \"id_product\": \"76\", \"name_product\": \"La voz de alma\", \"go_page\": \"la-voz-de-alma-2\" }
+payer_status => verified
+business => esaud@eutiximo.com
+num_cart_items => 1
+mc_handling1 => 0.00
+verify_sign => A9A0gZTWcGyirG.qnLuzNtP0Yj-IAGhoum9Rt.7xhmqVH5w4q6wBPcsW
+payer_email => esaud-buyer@eutiximo.com
+tax1 => 17.76
+btn_id1 => 3975765
+txn_id => 1K6019871D223061E
+payment_type => instant
+last_name => buyer
+item_name1 => la voz de alma
+receiver_email => esaud@eutiximo.com
+payment_fee => 
+shipping_discount => 0.00
+quantity1 => 1
+insurance_amount => 0.00
+receiver_id => GGQPVXBMJ6Q2J
+txn_type => cart
+discount => 0.00
+mc_gross_1 => 111.00
+mc_currency => MXN
+residence_country => MX
+test_ipn => 1
+shipping_method => Default
+transaction_subject => 
+payment_gross => 
+ipn_track_id => d51417475da13
+is_trustworthy => 1
+
+
+
+-> Fuente confiable (Paypal.com)
+mc_gross => 128.76
+protection_eligibility => Eligible
+item_number1 => 
+payer_id => AMEQTYWKCES8C
+tax => 17.76
+payment_date => 00:31:14 Dec 30, 2018 PST
+payment_status => Completed
+charset => windows-1252
+first_name => test
+mc_fee => 10.54
+notify_version => 3.9
+custom => {\"id_user\":\"2\", \"id_product\":\"76\", \"name_product\":\"La voz de alma\", \"go_page\":\"categoria/tienda\" }
+payer_status => verified
+business => esaud@eutiximo.com
+num_cart_items => 1
+mc_handling1 => 0.00
+verify_sign => AsA9zTxZOXofFCweKOzeKrTucto.APz2VbQKV..sCF.KoFG2tp2MiXPY
+payer_email => esaud-buyer@eutiximo.com
+tax1 => 17.76
+btn_id1 => 3975765
+txn_id => 45Y13847SJ421262Y
+payment_type => instant
+last_name => buyer
+item_name1 => la voz de alma
+receiver_email => esaud@eutiximo.com
+payment_fee => 
+shipping_discount => 0.00
+quantity1 => 1
+insurance_amount => 0.00
+receiver_id => GGQPVXBMJ6Q2J
+txn_type => cart
+discount => 0.00
+mc_gross_1 => 111.00
+mc_currency => MXN
+residence_country => MX
+test_ipn => 1
+shipping_method => Default
+transaction_subject => 
+payment_gross => 
+ipn_track_id => 811159cd79e38
+is_trustworthy => 1
+
+
+
+-> Fuente confiable (Paypal.com)
+mc_gross => 128.76
+protection_eligibility => Eligible
+item_number1 => 
+payer_id => AMEQTYWKCES8C
+tax => 17.76
+payment_date => 00:33:32 Dec 30, 2018 PST
+payment_status => Completed
+charset => windows-1252
+first_name => test
+mc_fee => 10.54
+notify_version => 3.9
+custom => {\"id_user\":\"2\", \"id_product\":\"76\", \"name_product\":\"La voz de alma\", \"go_page\":\"categoria/tienda\" }
+payer_status => verified
+business => esaud@eutiximo.com
+num_cart_items => 1
+mc_handling1 => 0.00
+verify_sign => AiaURZZRrjMVB1JCmN4UaWod893XAnf2M3EJjV3ViQ-yf1lCCbi2lMoT
+payer_email => esaud-buyer@eutiximo.com
+tax1 => 17.76
+btn_id1 => 3975765
+txn_id => 5DD40901VP4158805
+payment_type => instant
+last_name => buyer
+item_name1 => la voz de alma
+receiver_email => esaud@eutiximo.com
+payment_fee => 
+shipping_discount => 0.00
+quantity1 => 1
+insurance_amount => 0.00
+receiver_id => GGQPVXBMJ6Q2J
+txn_type => cart
+discount => 0.00
+mc_gross_1 => 111.00
+mc_currency => MXN
+residence_country => MX
+test_ipn => 1
+shipping_method => Default
+transaction_subject => 
+payment_gross => 
+ipn_track_id => 5b7fa7768496
+is_trustworthy => 1
+
+
+
+-> Fuente confiable (Paypal.com)
+mc_gross => 128.76
+protection_eligibility => Eligible
+item_number1 => 
+payer_id => AMEQTYWKCES8C
+tax => 17.76
+payment_date => 00:38:30 Dec 30, 2018 PST
+payment_status => Completed
+charset => windows-1252
+first_name => test
+mc_fee => 10.54
+notify_version => 3.9
+custom => {\"id_user\":\"2\", \"id_product\":\"76\", \"name_product\":\"La voz de alma\", \"go_page\":\"la-voz-de-alma-2\" }
+payer_status => verified
+business => esaud@eutiximo.com
+num_cart_items => 1
+mc_handling1 => 0.00
+verify_sign => AgC-El4pJ8sWpUDs5d3GauVDQ.iPA0zPTwz8.RuUXQKkv46dOKSHHKwO
+payer_email => esaud-buyer@eutiximo.com
+tax1 => 17.76
+btn_id1 => 3975765
+txn_id => 2B5530059F0692313
+payment_type => instant
+last_name => buyer
+item_name1 => la voz de alma
+receiver_email => esaud@eutiximo.com
+payment_fee => 
+shipping_discount => 0.00
+quantity1 => 1
+insurance_amount => 0.00
+receiver_id => GGQPVXBMJ6Q2J
+txn_type => cart
+discount => 0.00
+mc_gross_1 => 111.00
+mc_currency => MXN
+residence_country => MX
+test_ipn => 1
+shipping_method => Default
+transaction_subject => 
+payment_gross => 
+ipn_track_id => a5c1daf673dec
+is_trustworthy => 1
+
+
+
+-> Fuente confiable (Paypal.com)
+mc_gross => 128.76
+protection_eligibility => Eligible
+item_number1 => 
+payer_id => AMEQTYWKCES8C
+tax => 17.76
+payment_date => 01:42:10 Dec 30, 2018 PST
+payment_status => Completed
+charset => windows-1252
+first_name => test
+mc_fee => 10.54
+notify_version => 3.9
+custom => {\"id_user\":\"2\", \"id_product\":\"76\", \"name_product\":\"La voz de alma\", \"go_page\":\"la-voz-de-alma-2\" }
+payer_status => verified
+business => esaud@eutiximo.com
+num_cart_items => 1
+mc_handling1 => 0.00
+verify_sign => AUg223oCjn4HgJXKkrICawXQ3fyUAap-XIwfeAtET1e6PQG-heOp0GO2
+payer_email => esaud-buyer@eutiximo.com
+tax1 => 17.76
+btn_id1 => 3975765
+txn_id => 0PJ95749UC5185300
+payment_type => instant
+last_name => buyer
+item_name1 => la voz de alma
+receiver_email => esaud@eutiximo.com
+payment_fee => 
+shipping_discount => 0.00
+quantity1 => 1
+insurance_amount => 0.00
+receiver_id => GGQPVXBMJ6Q2J
+txn_type => cart
+discount => 0.00
+mc_gross_1 => 111.00
+mc_currency => MXN
+residence_country => MX
+test_ipn => 1
+shipping_method => Default
+transaction_subject => 
+payment_gross => 
+ipn_track_id => a4956d23e3b2a
+is_trustworthy => 1
+
+
+
+-> Fuente confiable (Paypal.com)
+mc_gross => 128.76
+protection_eligibility => Eligible
+item_number1 => 
+payer_id => AMEQTYWKCES8C
+tax => 17.76
+payment_date => 01:54:30 Dec 30, 2018 PST
+payment_status => Completed
+charset => windows-1252
+first_name => test
+mc_fee => 10.54
+notify_version => 3.9
+custom => {\"id_user\":\"2\", \"id_product\":\"76\", \"name_product\":\"La voz de alma\", \"go_page\":\"categoria/tienda\" }
+payer_status => verified
+business => esaud@eutiximo.com
+num_cart_items => 1
+mc_handling1 => 0.00
+verify_sign => ACT.D1TTyTgNY20CIkVaguhNbeSiAw61Mv6OU7wC1QDUiOqQ3qMsNGI3
+payer_email => esaud-buyer@eutiximo.com
+tax1 => 17.76
+btn_id1 => 3975765
+txn_id => 4BK66623BA0648409
+payment_type => instant
+last_name => buyer
+item_name1 => la voz de alma
+receiver_email => esaud@eutiximo.com
+payment_fee => 
+shipping_discount => 0.00
+quantity1 => 1
+insurance_amount => 0.00
+receiver_id => GGQPVXBMJ6Q2J
+txn_type => cart
+discount => 0.00
+mc_gross_1 => 111.00
+mc_currency => MXN
+residence_country => MX
+test_ipn => 1
+shipping_method => Default
+transaction_subject => 
+payment_gross => 
+ipn_track_id => 133d813e760e9
+is_trustworthy => 1
+
+
+
+-> Fuente confiable (Paypal.com)
+mc_gross => 128.76
+protection_eligibility => Eligible
+item_number1 => 
+payer_id => AMEQTYWKCES8C
+tax => 17.76
+payment_date => 22:41:44 Dec 30, 2018 PST
+payment_status => Completed
+charset => windows-1252
+first_name => test
+mc_fee => 10.54
+notify_version => 3.9
+custom => {\"id_user\":\"3\", \"id_product\":\"76\", \"name_product\":\"La voz de alma\", \"go_page\":\"la-voz-de-alma-2\" }
+payer_status => verified
+business => esaud@eutiximo.com
+num_cart_items => 1
+mc_handling1 => 0.00
+verify_sign => AkVb3zjeClj0rWnHCfjomGgYnMbhAELeOoG2h0Kzw.YgWjnMA5plWqK5
+payer_email => esaud-buyer@eutiximo.com
+tax1 => 17.76
+btn_id1 => 3975765
+txn_id => 4U954186C83379906
+payment_type => instant
+last_name => buyer
+item_name1 => la voz de alma
+receiver_email => esaud@eutiximo.com
+payment_fee => 
+shipping_discount => 0.00
+quantity1 => 1
+insurance_amount => 0.00
+receiver_id => GGQPVXBMJ6Q2J
+txn_type => cart
+discount => 0.00
+mc_gross_1 => 111.00
+mc_currency => MXN
+residence_country => MX
+test_ipn => 1
+shipping_method => Default
+transaction_subject => 
+payment_gross => 
+ipn_track_id => b87469799bfef
+is_trustworthy => 1
+
+
+
+-> Fuente confiable (Paypal.com)
+mc_gross => 128.76
+protection_eligibility => Eligible
+item_number1 => 
+payer_id => AMEQTYWKCES8C
+tax => 17.76
+payment_date => 22:46:38 Dec 30, 2018 PST
+payment_status => Completed
+charset => windows-1252
+first_name => test
+mc_fee => 10.54
+notify_version => 3.9
+custom => {\"id_user\":\"3\", \"id_product\":\"76\", \"name_product\":\"La voz de alma\", \"go_page\":\"categoria/tienda\", \"wp_user_email\": \"esaud@eutiximo.com\" }
+payer_status => verified
+business => esaud@eutiximo.com
+num_cart_items => 1
+mc_handling1 => 0.00
+verify_sign => ApKghSivOFtm6Gk7Iqy6QZvljWTIAMTl968C7F6P1ESe6mkJ6RNHD3Qu
+payer_email => esaud-buyer@eutiximo.com
+tax1 => 17.76
+btn_id1 => 3975765
+txn_id => 2VB19737TD720530K
+payment_type => instant
+last_name => buyer
+item_name1 => la voz de alma
+receiver_email => esaud@eutiximo.com
+payment_fee => 
+shipping_discount => 0.00
+quantity1 => 1
+insurance_amount => 0.00
+receiver_id => GGQPVXBMJ6Q2J
+txn_type => cart
+discount => 0.00
+mc_gross_1 => 111.00
+mc_currency => MXN
+residence_country => MX
+test_ipn => 1
+shipping_method => Default
+transaction_subject => 
+payment_gross => 
+ipn_track_id => e46ad41d3e70a
+is_trustworthy => 1
+
+
+
+-> Fuente confiable (Paypal.com)
+mc_gross => 128.76
+protection_eligibility => Eligible
+item_number1 => 
+payer_id => AMEQTYWKCES8C
+tax => 17.76
+payment_date => 23:05:26 Dec 30, 2018 PST
+payment_status => Completed
+charset => windows-1252
+first_name => test
+mc_fee => 10.54
+notify_version => 3.9
+custom => {\"id_user\":\"3\", \"id_product\":\"76\", \"name_product\":\"La voz de alma\", \"go_page\":\"la-voz-de-alma-2\", \"wp_user_email\": \"esaud@eutiximo.com\" }
+payer_status => verified
+business => esaud@eutiximo.com
+num_cart_items => 1
+mc_handling1 => 0.00
+verify_sign => ACMvNy.ibNVKseLO-.YPcE0q1JM4A05yCz4VnY8.JGwaFfj3I4NAxLK.
+payer_email => esaud-buyer@eutiximo.com
+tax1 => 17.76
+btn_id1 => 3975765
+txn_id => 9TG312649C388810C
+payment_type => instant
+last_name => buyer
+item_name1 => la voz de alma
+receiver_email => esaud@eutiximo.com
+payment_fee => 
+shipping_discount => 0.00
+quantity1 => 1
+insurance_amount => 0.00
+receiver_id => GGQPVXBMJ6Q2J
+txn_type => cart
+discount => 0.00
+mc_gross_1 => 111.00
+mc_currency => MXN
+residence_country => MX
+test_ipn => 1
+shipping_method => Default
+transaction_subject => 
+payment_gross => 
+ipn_track_id => 83dfe693d5a15
+is_trustworthy => 1
+
+
+
+log of 08-01-2019 01:32:32 :
 -> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_action => 1
 
 
-
+-------------------------------------------------------------log of 26-01-2019 12:11:05 :
 -> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
+mc_gross => 300.00
+protection_eligibility => Ineligible
+payer_id => P5CG57KGM3XN6
+payment_date => 16:10:53 Jan 25, 2019 PST
 payment_status => Completed
-postman_action => 1
+charset => windows-1252
+first_name => Carlos
+mc_fee => 18.38
+notify_version => 3.9
+custom => {\"id_user\":\"\", \"id_product\":\"277\", \"name_product\":\"Mujer Sabia | Taller\", \"go_page\":\"mujer-sabia\", \"wp_user_email\": \"\" }
+payer_status => verified
+business => almaconsciente.socialmedia@gmail.com
+quantity => 1
+verify_sign => Aeg8gfsGVkJpuz3WArfZmlZjma4RA9rnalkCs.-GeH-0xnAzmENeKS61
+payer_email => project.nomad84@gmail.com
+txn_id => 4U470600C4594632U
+payment_type => instant
+last_name => Munoz R
+receiver_email => almaconsciente.socialmedia@gmail.com
+payment_fee => 
+shipping_discount => 0.00
+receiver_id => FYPCV586GTUXC
+insurance_amount => 0.00
+txn_type => web_accept
+item_name => Mujer Sabia
+discount => 0.00
+mc_currency => MXN
+item_number => 
+residence_country => MX
+shipping_method => Default
+transaction_subject => 
+payment_gross => 
+ipn_track_id => b58806bec89b8
 
 
-
+-------------------------------------------------------------log of 27-01-2019 02:57:52 :
 -> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
+mc_gross => 10.00
+protection_eligibility => Ineligible
+payer_id => KX94N96NTE2GU
+payment_date => 18:57:41 Jan 26, 2019 PST
 payment_status => Completed
-postman_action => 1
+charset => windows-1252
+first_name => Nicolas
+mc_fee => 5.10
+notify_version => 3.9
+custom => {\"id_user\":\"65\", \"id_product\":\"375\", \"name_product\":\"Reto Amor Del Bueno | Curso Online\", \"go_page\":\"reto-amor-del-bueno\", \"wp_user_email\": \"patolin_wrx@hotmail.com\" }
+payer_status => unverified
+business => almaconsciente.socialmedia@gmail.com
+quantity => 1
+verify_sign => Ay.rc.fTmhHDfQukRYTwpMtWRh.OAr-UR4ig1KuR7bxBX1lArAFwKzbi
+payer_email => n.rojas.poblete@gmail.com
+txn_id => 6HL93343HF153422E
+payment_type => instant
+last_name => Rojas
+receiver_email => almaconsciente.socialmedia@gmail.com
+payment_fee => 
+shipping_discount => 0.00
+receiver_id => FYPCV586GTUXC
+insurance_amount => 0.00
+txn_type => web_accept
+item_name => Botón de Prueba
+discount => 0.00
+mc_currency => MXN
+item_number => 
+residence_country => MX
+shipping_method => Default
+transaction_subject => 
+payment_gross => 
+ipn_track_id => 912e24e2842c3
 
 
-
+-------------------------------------------------------------log of 27-01-2019 03:12:44 :
 -> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
+mc_gross => 10.00
+protection_eligibility => Ineligible
+payer_id => JAR5F5ZNY4N6C
+payment_date => 19:12:37 Jan 26, 2019 PST
 payment_status => Completed
-postman_action => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
+charset => windows-1252
 first_name => Edgar
+mc_fee => 5.10
+notify_version => 3.9
+custom => {\"id_user\":\"67\", \"id_product\":\"375\", \"name_product\":\"Reto Amor Del Bueno | Curso Online\", \"go_page\":\"reto-amor-del-bueno\", \"wp_user_email\": \"gareutix_eus@hotmail.com\" }
+payer_status => unverified
+business => almaconsciente.socialmedia@gmail.com
+quantity => 1
+verify_sign => AqJ4-Y8ul0BEB03CvGYh1y50NJVBATDOR50iBRQNjEbNOSe2SdGtud7d
+payer_email => esaud@eutiximo.com
+txn_id => 0XV7550317112390G
+payment_type => instant
+payer_business_name => Eutiximo
 last_name => Uribe Saud
-payment_status => Completed
-postman_action => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
+receiver_email => almaconsciente.socialmedia@gmail.com
+payment_fee => 
+shipping_discount => 0.00
+receiver_id => FYPCV586GTUXC
+insurance_amount => 0.00
+txn_type => web_accept
+item_name => Botón de Prueba
+discount => 0.00
 mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_action => 1
+item_number => 
+residence_country => MX
+shipping_method => Default
+transaction_subject => 
+payment_gross => 
+ipn_track_id => 9355030bc690
 
 
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_action => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_action => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_action => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_action => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_action => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_action => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_action => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"18\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_action => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_test => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_test => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_test => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_test => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_test => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_test => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_test => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_test => 1
-
-
-
--> La fuente no es confiable.
-action => wp_paypal_ipn
-custom => {\"id_user\": \"2\", \"id_product\": \"181\", \"name_product\": \"Como vencer tus miedos\", \"go_page\": \"como-vencer-tus-miedos\", \"wp_user_email\": \"esaud@eutiximo.com\" }
-payment_date => 00:15:19 Dec 29, 2018 PST
-quantity1 => 1
-mc_gross_1 => 111.00
-tax => 17.76
-mc_gross => 128.76
-mc_currency => MXN
-first_name => Edgar
-last_name => Uribe Saud
-payment_status => Completed
-postman_test => 1
-
-
-
+-------------------------------------------------------------

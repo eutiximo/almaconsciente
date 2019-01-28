@@ -36,6 +36,45 @@ var console, document, window, $g;
         });
     };
     
+    $g.tabs = function () {
+        var Elems = $("[tabs]");
+        
+        function build (Elem) {
+            var getNav = Elem.find('nav'),
+                getButtonsNav = getNav.find('button'),
+                getTabs = Elem.find('[tab-display]'),
+                current = 0;
+            
+            getButtonsNav.each(function (index) {
+                $(this).attr('tab-target', index);
+                getTabs.eq(index).attr('tab-display', index);
+            });
+            
+            //Activar activar los tabs de inicio
+            getButtonsNav.eq(current).addClass('act');
+            getTabs.eq(current).addClass('act');
+            
+            //Programar eventos
+            getButtonsNav.on('click', function () {
+                var getTarget = +$(this).attr('tab-target');
+                
+                if (getTarget !== current) {
+                    getButtonsNav.eq(current).removeClass('act');
+                    getTabs.eq(current).removeClass('act');
+                    
+                    current = getTarget;
+                    
+                    $(this).addClass('act');
+                    getTabs.eq(current).addClass('act');
+                }
+                
+                return false;
+            });
+        }
+        
+        Elems.each(function () { build($(this)); });
+    };
+    
     /* Document Ready */
     $(function () {
         $g.owl.init();
@@ -47,5 +86,7 @@ var console, document, window, $g;
         $g.ipopover();
         $g.footer_always_bottom();
         $g.responsiveEmbed();
+        $g.formatCurrency();
+        $g.tabs();
     });
 })();

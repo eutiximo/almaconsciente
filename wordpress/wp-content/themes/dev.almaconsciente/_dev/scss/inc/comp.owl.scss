@@ -4,6 +4,7 @@
     position: relative;
     
     &.owl-theme1 {
+        .owl-item { overflow: hidden; }
         .item {
             display: block;
             width: 100%;
