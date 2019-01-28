@@ -22,11 +22,11 @@ $context["prms"] = array();
 $context["catprms"] = $catprms = $MC->get_category_params($post->ID);
 
 // Filtrar configuraciones por categoría del post.
-if ($catprms->data_parent->slug === "blog"):
+if ($catprms->data_parent->template === "blog"):
     require_once("parts/page.blog.php");
-elseif ($catprms->data_parent->slug === "tienda"):
+elseif ($catprms->data_parent->template === "tienda"):
     require_once("parts/page.tienda.php");
-elseif ($catprms->data_parent->slug === "talleres"):
+elseif ($catprms->data_parent->template === "talleres"):
     require_once("parts/page.talleres.php");
 else:
     require_once("parts/page.blog.php");

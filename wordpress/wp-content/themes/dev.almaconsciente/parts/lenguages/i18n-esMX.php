@@ -1,6 +1,9 @@
 <?php
 
 return array(
+    "admin.cat.add_field.template.title" => "Plantilla",
+    "admin.cat.add_field.templete.description" => "Escribe el nombre de la plantilla para tomar en cuenta al ver dicha categoría. (opcional)",
+    
     "generic.btn.readmore" => "leer más",
     "generic.btn.viewmore" => "Ver más",
     "generic.text.share" => "Compartir",
@@ -18,13 +21,6 @@ return array(
     "index.slide.there_are_no_slides" => "No hay publicaciones destacadas",
     "index.resentPost.title" => "Publicaciones recientes",
     "index.resentPost.no_have_posts" => "Por el momento no hay publicaciones recientes.",
-    "index.contact.view_map" => "Ver mapa",
-    "index.contact.view_form" => "Ver formulario",
-    "index.contact.title" => "Contacto",
-    "index.contact.placeholder_name" => "Nombre*",
-    "index.contact.placeholder_email" => "Email*",
-    "index.contact.placeholder_msg" => "Mensaje",
-    "index.contact.btn_send" => "Enviar",
     
     "archive.blog.no_posts" => "No hay contenido por el momento",
     "archive.workshop.no_posts" => "No hay talleres por el momento",
@@ -32,7 +28,7 @@ return array(
     "archive.tienda.paid" => "Pagado",
     "archive.tienda.post_protected" => "Protegido",
     "archive.tienda.post_protected_msg" => "Este prodcuto tiene material multimedia protegido.",
-    "archive.tienda.btn_buy" => "Comparar",
+    "archive.tienda.btn_buy" => "Comprar",
     "archive.tienda.message_thanks_for_buy" => "<div class='content text-center'>Gracias por tu compra <i class=\"fa fa-smile-o\"></i><p class='d-block h8'>Si tu producto aún no se ha desbloqueado intenta refrescar la página, puede que <b>PayPal</b> aun este procesando tu compra. Si tu compra no se desbloquea en el <b>lapso de una hora</b>, ponte en contacto con el administrador de la página.</p></div>",
     "archive.tienda.message_cancel_buy" => "<div class='content'>La compra fue cancelada</div>",
     
@@ -54,12 +50,27 @@ return array(
     "aside.search.title" => "Buscador interno",
     "aside.scheduleWorkshop.title" => "Horario del taller",
     "aside.workshops.title" => "Estamos impartiendo ahora",
+    "aside.workshops.title_workshopless_form" => "Espacios agotados",
+    "aside.workshops.caption_workshopless_form" => "Por ahora todos nuestros lugares están ocupados, déjanos tus datos y te avisaremos cuando haya espacio para ti.",
+    "aside.workshops.value_hidden_input" => "Talleres SOLD-OUT",
     "aside.subcats.title" => "Subcategorias",
     "aside.subcats.btn_see_all" => "Ver todos",
     "aside.great_post.title" => "Destacados",
     
     "pagination.btn.first_page" => "Primero",
     "pagination.btn.last_page" => "Último",
+    
+    "contactform.placeholder.phone" => "Teléfono",
+    "contactform.view_map" => "Ver mapa",
+    "contactform.view_form" => "Ver formulario",
+    "contactform.title" => "Contacto",
+    "contactform.placeholder_name" => "Nombre*",
+    "contactform.placeholder_email" => "Email*",
+    "contactform.placeholder_msg" => "Mensaje",
+    "contactform.btn_send" => "Enviar",
+    "contactform.notify.success" => "Mensaje enviado",
+    "contactform.notify.error" => "Ocurrio un problema al enviar mensaje.",
+    "contactform.notify.warm_captcha" => "Tienes que validar el captcha",
     
     "search.placeholder_input" => "Escribe aquí",
     "search.title" => "Busqueda",
@@ -69,5 +80,14 @@ return array(
     
     "page.404.title" => "Error 404",
     "page.404.message" => "No podemos procesar tu solicitud, es posible que se trate de un error en la URL o la página ya fue eliminada.",
-    "page.404.text_button" => "Regresar a la página de inicio"
+    "page.404.text_button" => "Regresar a la página de inicio",
+    
+    "mailtpl.user_registry.headTitle" => "Correo de registro",
+    "mailtpl.user_registry.bodyTitle" => "Bienvenido a %s",
+    "mailtpl.user_registry.bodyContentPart1" => "<p style='text-align:center;font-size:18px;'>Gracias por formar parte de nuestra comunidad.</p>",
+    "mailtpl.user_registry.bodyContentPart2" => "<p>Si no vez los enlaces marca este correo que <strong>no es spam</strong> o ver información bloqueada para ver los enlaces que te permitirán verificar y acceder a tu cuenta.</p>",
+    "mailtpl.user_registry.bodyContentPart3" => "<p><strong>Nombre de usuario:</strong> %s</p>",
+    "mailtpl.user_registry.bodyContentPart4" => "<p><strong>Id de registro:</strong> %s</p>",
+    "mailtpl.user_registry.bodyContentPart5" => "<p style='text-align:center;'><a href='%s'><img src='http://almaconsciente.com.mx/wp-content/uploads/2019/01/btn-landing.jpg'></a></p>",
+    "mailtpl.user_registry.bodyContentPart6" => "<p>Si tienes algún problema contáctanos a este correo main@almaconsciente.com.mx</p>"
 );

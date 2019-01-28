@@ -63,9 +63,6 @@
   display: inline-block;
 }
 
-/*.acf-postbox {
-    h2.hndle.ui-sortable-handle a.acf-hndle-cog { display: none !important; }
-}*/
-.acf-postbox:hover > .hndle .acf-hndle-cog {
+.acf-postbox > .hndle .acf-hndle-cog, .acf-postbox:hover > .hndle .acf-hndle-cog {
   display: none !important;
 }

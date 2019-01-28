@@ -40,43 +40,34 @@
     </div>
     
     {% elseif prms.showPaymentProductBox and not prms.viewDownloadBox %}
-    <div class="col-12 paymentProductBox">
-        {% if post.get_field('unlock_by_password') %}
-        <p class="h5 fw-bold text-left">{{ i18n["aside.protected_content_title"] }}</p>
-        <p class="h8 text-left">{{ i18n["aside.instructions"] }}</p>
-        <form action="{{ post.link }}" method="post" class="d-block">
-            <div class="input-group">
-                <input type="password" name="password_product" class="form-control" placeholder="{{ i18n['aside.input_placeholder'] }}">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="submit">{{ i18n["aside.btn_send"] }}</button>
-                </div>
-            </div>
-        </form>
-            {% if pass_fail %}
-            <p class="text-danger fw-bold text-left h7">{{ i18n["aside.protected_content.fail_password"] }}</p>
-            {% endif %}
-        
-        {% else %}
-        <p class="h5 fw-bold">{{ i18n["aside.buy_product.title"] }}</p>
-        <p class="h1 fw-bold" format-currency px-cents="-15"><span>$</span>{{ post.get_field("product_price") }}</p>
-        
-        {% if current_user.isLogged %}
-            <form action="{{ paypal.service_uri }}" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="{{ post.get_field('paypal_button_id') }}">
-                <input type="hidden" name="custom" value='{"id_user":"{{current_user.ID}}", "id_product":"{{post.ID}}", "name_product":"{{post.title}}", "go_page":"{{wp.request}}", "wp_user_email": "{{ current_user.user_email }}" }'>
-                <button type="submit" class="btn btn-exodus"><i class="fa fa-shopping-cart" style="position:relative;top:-1px;"></i> 
-                {{ i18n["aside.buy_product.text1" ]}}</button>
-            </form>
-            <p class="h8 leyendPaypal">{{ i18n["aside.buy_product.text2"] }} <i class="fa fa-paypal"></i> {{ i18n["aside.buy_product.text3"] }}</p>
-        {% else %}
-            <a href="{{ function('wp_login_url', wp.request) }}" class="btn btn-exodus">{{ i18n["aside.buy_product.access_account"] }}</a>
-            <p class="h8 leyendPaypal">{{ i18n["aside.buy_product.leyend_no_users"] }}</p>
-        {% endif %}
-        
-        {% endif %}
-        <br>
-    </div>
+        {% include 'tpl-paymentProductBox.twig' with {
+            view: post.get_field('unlock_by_password') == 'unlock_per_password' ? 'unlock_per_password' : 'view_buy_for_users',
+            priceProduct: post.get_field("product_price"),
+            paypalID: post.get_field('paypal_button_id'),
+            p: post
+            }
+        %}
+    
+    {% endif %}
+    
+    <!-- Caja venta/preventa de talleres & formulario de SOLD-OUT -->
+    {% if prms.viewBuyWorkshop %}
+        {% include 'tpl-paymentProductBox.twig' with {
+            view: 'view_buy_for_users',
+            headerTitle: __(post.get_field('prev_title')),
+            textButton: __(post.get_field('text_button')),
+            priceProduct: post.get_field("price_workshop"),
+            paypalID: post.get_field('paypal_button_id'),
+            p: post
+            }
+        %}
+    
+    {% elseif prms.viewFormWorkshopless %}
+        {% include 'tpl-paymentProductBox.twig' with {
+            view: 'form_info_product',
+            p: post
+            }
+        %}
     {% endif %}
     
     <!-- Caja de busqueda -->

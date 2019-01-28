@@ -7,7 +7,7 @@ $context = Timber::get_context();
 //Obtener categoría activa
 $context["catprms"] = $catprms = $MC->get_category_params();
 //Definir la clase de main -> esto sirve para las hojas de estilo.
-$context["nameClass"] = "archive {$catprms->data_parent->slug}";
+$context["nameClass"] = "archive {$catprms->data_parent->template}";
 //Definir funciones a ejecutar en el JSRUN
 $context["metajsrun"] = "";
 //Activar el modo sticky en el nav
@@ -16,11 +16,11 @@ $context["navSticky"] = true;
 $context["prms"] = array();
 
 //Cargar Scripts según la sección del archivo.
-if ($catprms->data_parent->slug === "blog"):
+if ($catprms->data_parent->template === "blog"):
     require_once("parts/archive.blog.php");
-elseif ($catprms->data_parent->slug === "tienda"):
+elseif ($catprms->data_parent->template === "tienda"):
     require_once("parts/archive.tienda.php");
-elseif ($catprms->data_parent->slug === "talleres"):
+elseif ($catprms->data_parent->template === "talleres"):
     require_once("parts/archive.talleres.php");
 else:
     require_once("parts/archive.blog.php");
@@ -29,7 +29,7 @@ endif;
 //Añadir al contexto la información los post de la categoria "Blog"
 global $paged;
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$argsPosts = array( "paged" => $paged, "cat" => $catprms->cat_ID );
+$argsPosts = array( "paged" => $paged, "cat" => $catprms->cat_ID , "orderby" => "modified");
 
 $context["posts"] = $posts = new Timber\PostQuery($argsPosts);
 

@@ -29,8 +29,17 @@
             
             <div class="box-links">
                 {% for menu in mainMenu %}
-                <a href="{{ menu.url }}">{{ menu.title }}</a>
+                <a href="{{ menu.url }}">{{ __(menu.title) }}</a>
                 {% endfor %}
+                
+                {% set social = post.get_field('social_networks') %}
+                {% if social|length %}
+                <div>
+                    {% for snet in social %}
+                    <a href="{{ snet.url }}" target="_blank"><span class="fa fa-{{ snet.platform }}"></span></a>
+                    {% endfor %}
+                </div>
+                {% endif%}
                 
                 <span class="sep"></span>
                 {% if current_user.isLogged %}

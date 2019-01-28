@@ -13,6 +13,10 @@ $context["prms"]["viewSubcats"] = true;
 // Saber si se efectuo compra o se cancelo y mostrar en pantalla.
 $context["payment_notification"] = $paymentNotification = isset($_GET["payment"]) ? $_GET["payment"] : false;
 
+if ($paymentNotification == "success" && is_user_logged_in()) {
+    $MC->send_welcome_mail();
+}
+
 //Obtener subcategorías
 $context["subcats"] = $subcats = $MC->get_subcategories($catprms);
 
