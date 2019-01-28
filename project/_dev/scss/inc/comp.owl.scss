@@ -1,0 +1,136 @@
+@import "_vars.scss";
+
+.owl-carousel {
+    position: relative;
+    
+    &.owl-theme1 {
+        .owl-item { overflow: hidden; }
+        .item {
+            display: block;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            
+            & > .container { @include absoluteElem("center"); }
+            
+            //Mobile & Tablet
+            @media (min-width: 1px) and (max-width: 999px) {
+                & > .container {
+                    max-width: 100%;
+                    background: linear-gradient(to bottom, rgba(white, 0) 0%, rgba(white, 0.6) 20%, rgba(white,1) 75%,rgba(white,0.1) 100%);
+                    
+                    .d-block { margin: 0 auto; }
+                }
+            }
+        }
+         
+        .owl-nav {
+            @include absoluteElem("center");
+            width: 100%;
+            height: 0;
+            
+            button {
+                display: block;
+                width: 50px;
+                height: 50px;
+                position: relative;
+                transform: translateY(-50%);
+                
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    background-color: white;
+                    border: 1px solid $clr-asabache;
+                    transform: rotate(45deg);
+                    box-shadow: rgba(black, 0.3) 0px 3px 6px;
+                }
+                
+                span {
+                    display: block;
+                    width: 20px;
+                    height: 30px;
+                    background: url("../media/assets/icon-angle.svg") center center / contain no-repeat;
+                    @include absoluteElem("center");
+                }
+                
+                &.owl-prev {
+                    float: left;
+                    left: 20px;
+                }
+                
+                &.owl-next {
+                    float: right;
+                    left: -20px;
+                    span { transform: translate(-40%, -50%) rotate(180deg); }
+                }
+            }
+            
+            /* mobile version */
+            @media (min-width: 1px) and (max-width: 576px) {
+                button {
+                    width: 30px;
+                    height: 30px;
+                    
+                    &:before {
+                        width: 30px;
+                        height: 30px;
+                    }
+                    span {
+                        width: 15px;
+                        height: 15px;
+                    }
+                    
+                    &.owl-prev { left: 5px; }
+                    &.owl-next { left: -5px; }
+                }
+            }
+        }
+        
+        .owl-dots {
+            display: block;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: calc(100% - 50px);
+            transform: translate(-0%, -50%);
+            text-align: center;
+            
+            .owl-dot {
+                display: inline-block;
+                vertical-align: middle;
+                width: 30px;
+                height: 30px;
+                margin: 0 10px;
+                border-radius: 50%;
+                border: 1px solid $clr-asabache;
+                background-color: white;
+                box-shadow: rgba(black, 0.5) 0 2px 5px;
+                
+                &:hover { background-color: #CCC; }
+                &.active { background-color: $clr-exodus; }
+                
+            }
+            
+            @media(min-width: 1px) and (max-width: 576px) {
+                .owl-dot {
+                    width: 20px;
+                    height: 20px;
+                    margin: 0 5px;
+                }
+            }
+        }
+        
+        &.set2 {
+            .owl-dots {
+                margin: 10px 0 30px 0;
+                position: relative;
+                top: 0;
+                transform: translate(0, 0);
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+//
+$widthSizes: (
+    (1, 8.33333333%),
+    (2, 16.66666667%),
+    (3, 25%),
+    (4, 33.33333333%),
+    (5, 41.66666667%),
+    (6, 50%),
+    (7, 58.33333333%),
+    (8, 66.66666667%),
+    (9, 75%),
+    (10, 83.33333333%),
+    (11, 91.66666667%),
+    (12, 100%)
+);
+@each $wz in $widthSizes {
+    .acf-w-#{nth($wz, 1)} { width: nth($wz, 2); }
+}
+
+.acf-fields {
+    .acf-field[class*="acf-w-"] {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: -4px;
+        
+        &:first-of-type { margin-left: 0; }
+    }
+    
+    .acf-checkboxs-d-inline {
+        ul li {
+            padding: 0 5px;
+            margin-bottom: 5px;
+            border-right: 1px solid rgba(black, 0.3);
+            display: inline-block;
+        }
+    }
+    .acf-checkbox-list {}
+}
+
+.acf-postbox, .acf-postbox:hover {
+    & > .hndle .acf-hndle-cog { display: none !important; }
+}

@@ -71,10 +71,10 @@ function fnBrowserSync() {
 /* Compilar todo el sitio y optimizar y sofuscar sus elementos */
 function buildDist() {
     var destProject = `./project/`;
-    gulp.src(destProject).pipe(clean({forse: true}))
+    gulp.src(`./project/*`).pipe(clean({forse: true}))
     
     setTimeout(function () {
-        gulp.src(`${devPath}/*`).pipe(gulp.dest(destProject));
+        gulp.src(`${devPath}/**/*.*`).pipe(gulp.dest(`./project/`));
     }, 3000);
 }
 

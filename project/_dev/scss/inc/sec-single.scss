@@ -1,0 +1,24 @@
+@import "_vars.scss";
+
+main.single {
+    .contentPost {
+        padding-bottom: 30px;
+
+        .shareBox {
+            margin-top: 30px;
+
+            & > b { position: relative; top: -4px; }
+            & > * { padding: 0 5px; }
+        }
+    }
+    
+    @if ($vp == "desktop") {
+        
+    }
+    
+    @if ($vp == "mobile") {
+        .headerToolbar {
+            justify-content: flex-end;
+        }
+    }
+}

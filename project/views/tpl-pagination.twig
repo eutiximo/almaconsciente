@@ -1,0 +1,64 @@
+{% if posts.pagination.pages is not empty %}
+    <nav class="pagination-block">
+        <ul class="pagination">
+            {% if pagination.pages|first and pagination.pages|first.current != true %}
+                <li class="first btn">
+                    <a href="{{ pagination.pages|first.link }}">{{ i18n["pagination.btn.first_page"] }}</a>
+                </li>
+            {% else %}
+                <li class="first btn disabled">
+                    <button disabled>{{ i18n["pagination.btn.first_page"] }}</button>
+                </li>
+            {% endif %}
+
+            {% if pagination.prev %}
+                <li class="prev btn">
+                    <a href="{{ pagination.prev.link }}">
+                        <i class="fa fa-chevron-left"></i>
+                    </a>
+                </li>
+            {% else %}
+                <li class="prev btn disabled">
+                    <button disabled>
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                </li>
+            {% endif %}
+
+            {% for page in pagination.pages %}
+                {% if page.link %}
+                    <li>
+                        <a href="{{ page.link }}" class="{{ page.class }}">{{ page.title }}</a>
+                    </li>
+                {% else %}
+                    <li class="current">
+                        <span class="{{ page.class }}">{{ page.title }}</span>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if pagination.next %}
+                <li class="next btn">
+                    <a href="{{ pagination.next.link }}">
+                        <i class="fa fa-chevron-right"></i>
+                    </a>
+                </li>
+            {% else %}
+                <li class="next btn disabled">
+                    <button disabled>
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
+                </li>
+            {% endif %}
+            {% if pagination.pages|last and pagination.pages|last.current != true %}
+                <li class="last btn">
+                    <a href="{{ pagination.pages|last.link }}">{{ i18n["pagination.btn.last_page"] }}</a>
+                </li>
+            {% else %}
+                <li class="last btn disabled">
+                    <button disabled>{{ i18n["pagination.btn.last_page"] }}</button>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+{% endif %}

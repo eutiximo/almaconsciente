@@ -1,0 +1,223 @@
+//Vars font-family
+$ff-quicksand: 'Quicksand', sans-serif;
+$ff-sacramento: 'Sacramento', cursive;
+
+//Vars colors
+$clr-asabache: #2C3E50;
+$clr-cloud: #ECF0F1;
+$clr-orange: #F7A642;
+$clr-exodus: #77729B;
+$clr-pinker: #CF6A87;
+
+//Vars font-size
+$fz-default-num: 18;
+$fz-default: $fz-default-num + 0px;
+
+
+//Mixin absolute positions elementes
+@mixin absoluteElem($mod: 'center') {
+    position: absolute;
+    @if $mod == 'center-top' {
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        
+    } @else if $mod == 'left-top' {
+        top: 0%;
+        left: 0%;
+        
+    } @else if $mod == 'right-top' {
+        top: 0%;
+        left: 100%;
+        transform: translate(-100%, 0%);
+        
+    } @else if $mod == 'left-center' {
+        top: 50%;
+        left: 0%;
+        transform: translate(0%, -50%);
+        
+    } @else if $mod == 'center' {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    } @else if $mod == 'right-center' {
+        top: 50%;
+        left: 100%;
+        transform: translate(-100%, -50%);
+        
+    } @else if $mod == 'left-bottom' {
+        top: 100%;
+        left: 0%;
+        transform: translate(-0%, -100%);
+        
+    } @else if $mod == 'center-bottom' {
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+        
+    } @else if $mod == 'right-bottom' {
+        top: 100%;
+        left: 100%;
+        transform: translate(-100%, -100%);
+    }
+    
+    
+}
+
+//Mixin font weight
+@mixin fontWeightStock() {
+    $weights: (100, 200, 300, 400, 500, 600, 700, 800, 900, bold, bolder, lighter, inherit);
+    
+    @each $weight in $weights {
+        .fw-#{$weight} { font-weight: $weight; }
+    }
+}
+
+//Mixin font sizes
+@mixin fontSizes($sizes: (45, 38, 32, 28, 18, 12), $offsetLineHeight: 0) {
+    @each $sz in $sizes {
+        $i: index($sizes, $sz);
+        
+        .h#{ $i }, .fz#{ $sz } {
+            font-size: toRem($sz);
+            line-height: toRem($sz + $offsetLineHeight);
+        }
+        
+        .ls#{ $i * 2}px { letter-spacing: ($i * 2) + 0px; }
+    }
+}
+
+// Mixin for width size of elements
+@mixin widths {
+    $widthSizes: (
+        (1, 8.33333333%),
+        (2, 16.66666667%),
+        (3, 25%),
+        (4, 33.33333333%),
+        (5, 41.66666667%),
+        (6, 50%),
+        (7, 58.33333333%),
+        (8, 66.66666667%),
+        (9, 75%),
+        (10, 83.33333333%),
+        (11, 91.66666667%),
+        (12, 100%)
+    );
+    $size-modes: (
+        ('-', 1px),
+        ('-sm-', 576px),
+        ('-md-', 768px),
+        ('-lg-', 992px),
+        ('-xl-', 1200px)
+    );
+
+    @each $szMod in $size-modes {
+        @media (min-width: nth($szMod, 2)) {
+            @each $wz in $widthSizes {
+                .w#{nth($szMod, 1)}#{nth($wz, 1)} { width: nth($wz, 2); }
+            }
+        }
+    }
+}
+
+//Mixin for absolute position of elements
+@mixin allPostionsElements() {
+    $typePosition: (
+        ("lt", "left-top"),
+        ("ct", "center-top"),
+        ("rt", "right-top"),
+        ("lc", "left-center"),
+        ("c", "center"),
+        ("rc", "right-center"),
+        ("lb", "left-bottom"),
+        ("cb", "center-bottom"),
+        ("rb", "right-bottom")
+    );
+    
+    @each $pos in $typePosition {
+        .pos-#{nth($pos, 1)} {
+            @include absoluteElem( nth($pos, 2) );
+        }
+    }
+}
+
+//Mixin for build animations transition
+@mixin animTransitions($times: (300ms, 500ms, 700ms, 1s), $easing: "ease") {
+    @if ($easing == "ease") {
+        $easing: 0.250, 0.100, 0.250, 1.000;
+    }
+    @else if ($easing == "linear") {
+        $easing: 0.250, 0.250, 0.750, 0.750;
+    }
+    @else if ($easing == "ease-in") {
+        $easing: 0.420, 0.000, 1.000, 1.000;
+    }
+    @else if ($easing == "ease-out") {
+        $easing: 0.000, 0.000, 0.580, 1.000;
+    }
+    @else if ($easing == "ease-in-out") {
+        $easing: 0.420, 0.000, 0.580, 1.000;
+    }
+    @else if ($easing == "easeInQuad") {
+        $easing: 0.550, 0.085, 0.680, 0.530;
+    }
+    @else if ($easing == "easeInCubic") {
+        $easing: 0.550, 0.055, 0.675, 0.190;
+    }
+    @else if ($easing == "easeInQuart") {
+        $easing: 0.895, 0.030, 0.685, 0.220;
+    }
+    @else if ($easing == "easeInQuint") {
+        $easing: 0.755, 0.050, 0.855, 0.060;
+    }
+    @else if ($easing == "easeInSine") {
+        $easing: 0.470, 0.000, 0.745, 0.715;
+    }
+    @else if ($easing == "easeInExpo") {
+        $easing: 0.950, 0.050, 0.795, 0.035;
+    }
+    @else if ($easing == "easeInCirc") {
+        $easing: 0.600, 0.040, 0.980, 0.335;
+    }
+    @else if ($easing == "easeInBank") {
+        $easing: 0.600, -0.280, 0.735, 0.045;
+    }
+    @else if ($easing == "easeOutQuad") {
+        $easing: 0.250, 0.460, 0.450, 0.940;
+    }
+    @else if ($easing == "easeOutCubic") {
+        $easing: 0.215, 0.610, 0.355, 1.000;
+    }
+    @else if ($easing == "easeOutQuart") {
+        $easing: 0.165, 0.840, 0.440, 1.000;
+    }
+    @else if ($easing == "easeOutQuint") {
+        $easing: 0.230, 1.000, 0.320, 1.000;
+    }
+    @else if ($easing == "easeOutSine") {
+        $easing: 0.390, 0.575, 0.565, 1.000;
+    }
+    
+    @each $time in $times {
+        .anim#{$time}, .anim#{$time}.all *, .anim#{$time}.childs > * {
+            transition: all $time cubic-bezier($easing);
+            transition-timing-function: cubic-bezier($easing);
+        }
+    }
+}
+
+//Mixin for show elements by responsive status
+@mixin resp() {
+    *[resp] { display: none !important; }
+    
+    @media (min-width: 1px) and (max-width: 576px) { *[resp*="xs"] { display: block !important;} }
+    @media (min-width: 577px) and (max-width: 768px) { *[resp*="sm"] { display: block !important;} }
+    @media (min-width: 769px) and (max-width: 992px) { *[resp*="md"] { display: block !important;} }
+    @media (min-width: 993px) { *[resp*="lg"] { display: block !important;} }
+}
+
+//Calculate pixeles to rem
+@function toRem($size) {
+    @return ($size / $fz-default-num) + 0rem;
+}

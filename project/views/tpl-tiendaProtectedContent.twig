@@ -1,0 +1,22 @@
+{% if data|length %}
+<div class="d-block">
+    <br>
+    {% for elem in data %}
+    <div class="d-block" {{ elem.display_hide ? 'collapse-p' : '' }}>
+        {% if elem.display_hide %}
+        <a href="#" btn-collapse-p class="d-block text-left h4 fw-bold btn btn-light">* {{ elem.title is empty ? i18n["aside.download.title.flat_content"] : elem.title }} <i class="fa fa-angle-down"></i></a>
+        {% else %}
+            {% if elem.title is not empty %}
+            <h4 class="fw-bold">* {{ elem.title }}</h4>
+            {% endif %}
+        {% endif %}
+        
+        <div class="w-100" {{ elem.display_hide ? 'main-panel' : '' }}>
+        <br>
+        {{ elem.flat_element }}
+        </div>
+    </div>
+    {% endfor %}
+    <hr>
+</div>
+{% endif %}
